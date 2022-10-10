@@ -1,0 +1,8 @@
+// 키 바인딩을 이 파일에 넣어서 기본값 재정의
+[
+  // 한/영 상태와 관계 없이 터미널 Focus 편리하게 하려고
+  {
+    "key": "cmd+q cmd+q",
+    "command": "workbench.action.terminal.focus"
+  }
+]
