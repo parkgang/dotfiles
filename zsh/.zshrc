@@ -4,6 +4,8 @@ export PATH="/opt/anaconda3/bin:$PATH"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 plugins=(
   git
   yarn
