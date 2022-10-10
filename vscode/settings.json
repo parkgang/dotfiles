@@ -1,12 +1,19 @@
 {
   "workbench.colorTheme": "GitHub Dark Default",
+  // [밝은 테마와 어두운 테마 간 전환](https://code.visualstudio.com/updates/v1_69#_toggle-between-light-and-dark-themes)
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "MesloLGS NF", // [폰트 다운로드](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 
   "files.autoSave": "onFocusChange", // 포커스가 손실되면 변경된 편집기는 자동으로 저장
   "files.associations": {
-    "*.json": "jsonc" // json에 주석을 사용할 수 있도록
     // "*.ts": "typescriptreact" // react의 snippets을 공유해서 사용하기 위함 (하지만 파일 아이콘이 모두 react으로 변하는 불편함이 있어 전역 코드 조각으로 변경)
+    "*.json": "jsonc", // json에 주석을 사용할 수 있도록
+    // [사용자 정의 env 파일 확장자](https://marketplace.visualstudio.com/items?itemName=IronGeek.vscode-env#custom-env-file-extension)
+    "*.env.development": "env",
+    "*.env.production": "env",
+    "*.env.test": "env"
   },
 
   /* Editor */
@@ -20,8 +27,23 @@
   },
   // [native bracket 사용](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2#how-to-enable-native-bracket-matching)
   "editor.bracketPairColorization.enabled": true,
+  // [수평 브래킷 가이드 사용](https://code.visualstudio.com/updates/v1_67#_bracket-guide-improvements)
+  "editor.guides.bracketPairsHorizontal": true,
   "editor.guides.bracketPairs": "active",
-  "editor.quickSuggestions": true, // [인라인 완성으로 빠른 제안](https://code.visualstudio.com/updates/v1_66#_quick-suggestions-as-inline-completions)
+  // [인라인 완성으로 빠른 제안](https://code.visualstudio.com/updates/v1_66#_quick-suggestions-as-inline-completions)
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+
+  // [마크다운 링크를 삽입할 파일 붙여넣기](https://code.visualstudio.com/updates/v1_68#_paste-files-to-insert-markdown-links)
+  "markdown.experimental.editor.pasteLinks.enabled": true,
+  "editor.experimental.pasteActions.enabled": true,
+
+  "window.commandCenter": true, // [커맨드 센터](https://code.visualstudio.com/updates/v1_69#_command-center)
+
+  "git.autofetch": true, // vscode에서 주기적으로 git fetch하는 기능 활성화: 오른쪽 하단에 자동 알림화면에 뜨길래 설정함
 
   /* Extensions 옵션 */
 
@@ -63,13 +85,21 @@
 
   "eslint.alwaysShowStatus": true,
 
+  "rest-client.previewOption": "exchange", // 요청 내용도 볼 수 있도록 활성화, 원래는 응답만 볼 수 있도록 설정되어 있습니다.
+
   "powermode.enabled": true, // power mode 활성화
   "powermode.shake.enabled": false, // power mode 화면이 흔들림 활성화 여부
   "powermode.presets": "fireworks", // power mode 효과
 
-  "git.autofetch": true, // vscode에서 주기적으로 git fetch하는 기능 활성화: 오른쪽 하단에 자동 알림화면에 뜨길래 설정함
-
   "redhat.telemetry.enabled": false, // redhat yaml 관련 팝업 계속 떠서 비활성화
+
+  // k8s 확장 관련해서 에러가 나와서 install 눌었더니 생김 딱히 중요한 설정은 아닌거 같으며 그냥 파일 경로인 거 같습니다.
+  // 계속 에러 경고를 보고 싶지 않음으로 필요에 따라 삭제하도록 합니다.
+  "vs-kubernetes": {
+    "vscode-kubernetes.kubectl-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\kubectl\\kubectl.exe",
+    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+    "vscode-kubernetes.helm-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
+  },
 
   // Vim 설정: 해당 설정에서 조정이 안되는 것은 keybindings.json 에도 있습니다
   "vim.handleKeys": {
@@ -78,12 +108,18 @@
     "<C-x>": false,
     "<C-z>": false,
     "<C-a>": false,
-    "<C-d>": false,
-    "<C-w>": false,
+    // 반 페이지 스크롤 하려고
+    // "<C-d>": false,
+    // vim 네이티브로 window 이동 하려고
+    // "<C-w>": false,
     "<C-f>": false,
     "<C-pageup>": false,
     "<C-pagedown>": false
   },
+  // "+p와 같은 방식으로 복붙하기 불편함으로 시스템 클립보드와 연동
+  "vim.useSystemClipboard": true,
+
+  /* language */
 
   /* JS/TS */
 
@@ -124,6 +160,15 @@
   "go.delveConfig": {
     "debugAdapter": "legacy" // [handler에 중단점을 찍을 때마다 디버깅이 중지되어서 일단은 레거시 디버깅 사용](https://stackoverflow.com/questions/69156581/does-the-execution-have-to-keep-stopping-to-set-a-breakpoint)
   },
+  // [Golang 확장 인레이 힌트 활성화](https://twitter.com/golang/status/1549106172870987776?s=21&t=5wEfMWJLporZ3Erph2QTwA)
+  // [Release Note](https://github.com/golang/vscode-go/releases/tag/v0.35.0)
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "go.inlayHints.parameterNames": true,
 
   /* c# */
 
@@ -132,7 +177,25 @@
   },
   "omnisharp.enableRoslynAnalyzers": true, // [소스 코드 분석기를 활성화 합니다](https://docs.microsoft.com/en-us/visualstudio/code-quality/roslyn-analyzers-overview?view=vs-2019#severity-levels-of-analyzers)
   "omnisharp.useEditorFormattingSettings": false,
+  "csharp.inlayHints.parameters.enabled": true,
+  "csharp.inlayHints.parameters.forIndexerParameters": true,
+  "csharp.inlayHints.parameters.forLiteralParameters": true,
+  "csharp.inlayHints.parameters.forObjectCreationParameters": true,
+  "csharp.inlayHints.parameters.forOtherParameters": true,
+  "csharp.inlayHints.parameters.suppressForParametersThatDifferOnlyBySuffix": true,
+  "csharp.inlayHints.parameters.suppressForParametersThatMatchArgumentName": true,
+  "csharp.inlayHints.parameters.suppressForParametersThatMatchMethodIntent": true,
+  "csharp.inlayHints.types.enabled": true,
+  "csharp.inlayHints.types.forImplicitObjectCreation": true,
+  "csharp.inlayHints.types.forImplicitVariableTypes": true,
+  "csharp.inlayHints.types.forLambdaParameterTypes": true,
 
+  /* 실험 */
+
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.shellIntegration.enabled": true, // [쉘 통합 ZSH과의 기능을 기대하여 활성화](https://code.visualstudio.com/updates/v1_69#_shell-integration)
+  "editor.experimental.stickyScroll.enabled": true,
   "window.zoomLevel": 0
+
   /* EOF */
 }
