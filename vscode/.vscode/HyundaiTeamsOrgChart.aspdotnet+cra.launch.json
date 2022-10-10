@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/Debug/net5.0/HyundaiTeamsOrgChart.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "preLaunchTask": "build",
+      "postDebugTask": "kill node.exe"
+    },
+    {
+      "name": "Client",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "https://teams.microsoft.com",
+      "webRoot": "${workspaceFolder}"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Server/Client",
+      "configurations": ["Server", "Client"]
+    }
+  ]
+}
