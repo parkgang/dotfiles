@@ -1,0 +1,98 @@
+{
+  // Theme
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+
+  // 포커스가 손실되면 변경된 편집기는 자동으로 저장
+  "files.autoSave": "onFocusChange",
+  "files.associations": {
+    // json에 주석을 사용할 수 있도록
+    "*.json": "jsonc"
+    // react의 snippets을 공유해서 사용하기 위함 (하지만 파일 아이콘이 모두 react으로 변하는 불편함이 있어 전역 코드 조각으로 변경)
+    // "*.ts": "typescriptreact"
+  },
+
+  /* Editor */
+
+  "editor.suggestSelection": "first",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true
+  },
+  // [제안 미리보기가 활성화](https://code.visualstudio.com/updates/v1_60#_inline-suggestions-in-autocomplete)
+  "editor.suggest.preview": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // prettier
+  "prettier.singleQuote": false,
+  // [기본 값 사용 ](https://prettier.io/docs/en/options.html#print-width)
+  "prettier.printWidth": 80,
+
+  /* Extensions 옵션 */
+
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  "todohighlight.isEnable": true,
+
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  "eslint.alwaysShowStatus": true,
+
+  // power mode 활성화
+  "powermode.enabled": true,
+  // power mode 화면이 흔들림 활성화
+  "powermode.enableShake": false,
+  // power mode 효과
+  "powermode.presets": "fireworks",
+
+  /* Language */
+
+  // JS/TS
+  // [Inlay hints 활성화](https://code.visualstudio.com/updates/v1_60#_inlay-hints-for-javascript-and-typescript)
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "workbench.colorCustomizations": {
+    "editorInlayHint.foreground": "#abb2bf",
+    "editorInlayHint.background": "#abb2bf30"
+  },
+  // [typescript server 설정](https://code.visualstudio.com/updates/v1_60#_typescripttsserverusesyntaxserver)
+  "typescript.tsserver.useSyntaxServer": "auto",
+
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.gopath": "",
+  "go.toolsManagement.autoUpdate": true,
+  // [handler에 중단점을 찍을 때마다 디버깅이 중지되어서 일단은 레거시 디버깅 사용](https://stackoverflow.com/questions/69156581/does-the-execution-have-to-keep-stopping-to-set-a-breakpoint)
+  "go.delveConfig": {
+    "debugAdapter": "legacy"
+  },
+
+  "[csharp]": {
+    // [C#의 경우 prettier를 지원하지 않아 아래의 포멧터를 사용합니다.](https://stackoverflow.com/questions/47352611/visual-studio-code-doesnt-format-c-sharp-code)
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+    // 손차장님과 협업을 위해 setting
+    // "editor.tabSize": 2
+  },
+  /// [소스 코드 분석기를 활성화 합니다](https://docs.microsoft.com/en-us/visualstudio/code-quality/roslyn-analyzers-overview?view=vs-2019#severity-levels-of-analyzers)
+  "omnisharp.enableRoslynAnalyzers": true,
+  "window.zoomLevel": 0,
+  // vscode에서 주기적으로 git fetch하는 기능 활성화. (오른쪽 하단에 자동 알림화면에 뜨길래 설정함)
+  "git.autofetch": true
+}
