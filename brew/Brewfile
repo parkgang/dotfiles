@@ -45,3 +45,16 @@ cask "notion"
 cask "postman"
 cask "slack"
 cask "visual-studio-code"
+mas "genie", id: 1445501415
+mas "GoodNotes", id: 1444383602
+mas "Magnet", id: 441258766
+mas "Messenger", id: 1480068668
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft Word", id: 462054704
+mas "Paint X", id: 668502966
+mas "PhotoScape X", id: 929507092
+mas "알라딘 ebook", id: 1023251042
+mas "카카오톡", id: 869223134
+mas "한컴오피스 한글 2014 VP 뷰어", id: 416746898
