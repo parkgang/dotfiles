@@ -1,0 +1,38 @@
+{
+  "console.log 🔥": {
+    "prefix": "log",
+    "body": ["console.log($1);"],
+    "description": "ts 기본 스니펫으로 제공하는게 있지만 스니펫 후 강제 개행이 이뤄지므로 커스텀 합니다."
+  },
+  "const 🔥": {
+    "prefix": "co",
+    "body": ["const $1 = $2;"],
+    "description": "빠르게 상수 만들기"
+  },
+  "let 🔥": {
+    "prefix": "le",
+    "body": ["let $1 = $2;"],
+    "description": "빠르게 변수 만들기"
+  },
+  "import 🔥": {
+    "prefix": "im",
+    "body": ["import {$2} from \"$1\""],
+    "description": "인텔리센스를 활용하기 위한 모듈 임포트"
+  },
+  "jest-test 🔥": {
+    "prefix": "jt",
+    "body": ["test(\"$1\", () => {", "  $2", "});"],
+    "description": "jest의 기본 테스트 코드 만들기"
+  },
+  "setTimeout Promise 생성기 🔥": {
+    "prefix": "ast",
+    "body": [
+      "await new Promise((resolve) => {",
+      "  setTimeout(() => {",
+      "    resolve(null);",
+      "  }, 3000);",
+      "});"
+    ],
+    "description": "setTimeout Promise 생성기"
+  }
+}

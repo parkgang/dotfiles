@@ -1,0 +1,7 @@
+{
+  "study blog reference": {
+    "prefix": "study",
+    "body": ["# Hi", "", "1. [해당문서를 토대로]($0) 실습되었습니다."],
+    "description": "실습을 진행한 블로그 글을 빠르게 작성할 수 있도록 도와줍니다."
+  }
+}

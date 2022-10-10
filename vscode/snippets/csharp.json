@@ -1,0 +1,25 @@
+{
+  "public class 🔥": {
+    "prefix": "pc",
+    "body": [
+      "namespace ${WORKSPACE_NAME}$1",
+      "{",
+      "    public class ${TM_FILENAME_BASE}",
+      "    {",
+      "        $0",
+      "    }",
+      "}"
+    ],
+    "description": "기본적인 클래스를 빠르게 생성합니다."
+  },
+  "Console.WriteLine 🔥": {
+    "prefix": "con",
+    "body": ["Console.WriteLine($0);"],
+    "description": "빠른 디버깅을 위한 Console.WriteLine를 생성합니다."
+  },
+  "trycatch 🔥": {
+    "prefix": "try",
+    "body": ["try", "{", "", "}", "catch (Exception ex)", "{", "", "}"],
+    "description": "기본 적인 trycatch 보일러 플레이트"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "generator-main 🔥": {
+    "prefix": "main",
+    "body": [
+      "package main",
+      "",
+      "import (",
+      "    \"fmt\"",
+      ")",
+      "",
+      "func main() {",
+      "    fmt.Printf(\"hello, world\\n\")",
+      "}",
+      ""
+    ],
+    "description": "go program을 빠르게 시작하도록 main 템플릿을 생성합니다."
+  },
+  "fmt.Printf 🔥": {
+    "prefix": "pr",
+    "body": ["fmt.Printf(\"$1\\n\")"],
+    "description": "빠른 디버깅을 위한 print문을 생성해줍니다."
+  }
+}

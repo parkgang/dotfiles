@@ -1,0 +1,56 @@
+{
+  "Test Buttion 🔥": {
+    "prefix": "bt",
+    "body": [
+      "<button",
+      "  onClick={() => {",
+      "    console.log(`버튼 테스트`);",
+      "    $1",
+      "  }}",
+      ">",
+      "  버튼 테스트",
+      "</button>"
+    ],
+    "description": "빠르게 버튼을 추가하여 디버깅을 이용하게 도와줍니다."
+  },
+  "Functional Component 🔥": {
+    "prefix": "fc",
+    "body": [
+      "export default function ${TM_FILENAME_BASE}() {",
+      "  return (",
+      "    <>",
+      "      <h1>${TM_FILENAME_BASE}</h1>",
+      "    </>",
+      "  );",
+      "}",
+      ""
+    ],
+    "description": "기본 함수형 컴포넌트를 생성합니다."
+  },
+  "함수형 컴포넌트 return": {
+    "prefix": "ret",
+    "body": ["return (", "  <>", "    $0", "  </>", ");"],
+    "description": "함수형 컴포넌트에서 빠르게 렌더링 확인을 위한 return 구문을 만들어 줍니다."
+  },
+  "빠르게 만드는 Fragments": {
+    "prefix": "<",
+    "body": ["<>", "  $0", "</>"],
+    "description": "컴포넌트의 자식을 그룹화하기 위한 Fragments를 빠르게 만들어줍니다."
+  }
+  // 이전에 export default를 하단에 추가할 때
+  // "Functional Component": {
+  //   "prefix": "fc",
+  //   "body": [
+  //     "function ${TM_FILENAME_BASE}() {",
+  //     "  return (",
+  //     "    <>",
+  //     "      <h1>${TM_FILENAME_BASE}</h1>",
+  //     "    </>",
+  //     "  );",
+  //     "}",
+  //     "",
+  //     "export default ${TM_FILENAME_BASE};"
+  //   ],
+  //   "description": "기본 함수형 컴포넌트를 생성합니다."
+  // }
+}
