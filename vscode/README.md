@@ -10,4 +10,5 @@
 
 ## Note
 
-1. `keybindings.json` 의 경우 `OS` 별로 저장되어 `{환경}.keybindings.json` 템플릿으로 분리해놓았습니다.
+1. `keybindings.json` 시리즈의 경우 `OS` 별로 저장되어 `{환경}.keybindings.json` 템플릿으로 분리해놓았습니다.
+1. `.vscode/launch.json` 시리즈의 경우 `{프로젝트명}.{스텍}.launch.json` 템플릿으로 분리해놓았습니다.
