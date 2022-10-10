@@ -3,6 +3,7 @@
   // [밝은 테마와 어두운 테마 간 전환](https://code.visualstudio.com/updates/v1_69#_toggle-between-light-and-dark-themes)
   "workbench.preferredLightColorTheme": "GitHub Light Default",
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.fontFamily": "MesloLGS NF", // [폰트 다운로드](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 
@@ -25,8 +26,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true // For ESLint
   },
-  // [native bracket 사용](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2#how-to-enable-native-bracket-matching)
-  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.enabled": true, // [native bracket 사용](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2#how-to-enable-native-bracket-matching)
   // [수평 브래킷 가이드 사용](https://code.visualstudio.com/updates/v1_67#_bracket-guide-improvements)
   "editor.guides.bracketPairsHorizontal": true,
   "editor.guides.bracketPairs": "active",
@@ -36,14 +36,20 @@
     "strings": "on",
     "other": "on"
   },
+  "editor.stickyScroll.enabled": true, // [Sticky Scroll](https://code.visualstudio.com/updates/v1_71#_sticky-scroll)
 
-  // [마크다운 링크를 삽입할 파일 붙여넣기](https://code.visualstudio.com/updates/v1_68#_paste-files-to-insert-markdown-links)
-  "markdown.experimental.editor.pasteLinks.enabled": true,
-  "editor.experimental.pasteActions.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
 
-  "window.commandCenter": true, // [커맨드 센터](https://code.visualstudio.com/updates/v1_69#_command-center)
+  "markdown.experimental.editor.pasteLinks.enabled": true, // [마크다운 링크를 삽입할 파일 붙여넣기](https://code.visualstudio.com/updates/v1_68#_paste-files-to-insert-markdown-links)
+  "markdown.experimental.updateLinksOnFileMove.enabled": "always", // [파일 이동 및 이름 변경 시 마크다운 링크 업데이트](https://code.visualstudio.com/updates/v1_71#_markdown-link-update-on-file-move-and-rename)
+
+  "window.commandCenter": true, // [커맨드 센터 중앙으로 배치](https://code.visualstudio.com/updates/v1_69#_command-center)
 
   "git.autofetch": true, // vscode에서 주기적으로 git fetch하는 기능 활성화: 오른쪽 하단에 자동 알림화면에 뜨길래 설정함
+
+  /* terminal */
+
+  // "terminal.integrated.smoothScrolling": true, // [부드러운 스크롤](https://code.visualstudio.com/updates/v1_71#_smooth-scrolling)
 
   /* Extensions 옵션 */
 
@@ -51,6 +57,7 @@
   "prettier.printWidth": 80, // [기본 값 사용](https://prettier.io/docs/en/options.html#print-width)
 
   "liveServer.settings.donotShowInfoMsg": true,
+  "redhat.telemetry.enabled": false, // redhat yaml 관련 팝업 계속 떠서 비활성화
 
   // NOTE: 도 어노테이션에 추가하려고: 보편적으로 많이 사용하니까
   "todohighlight.keywords": [
@@ -90,8 +97,6 @@
   "powermode.enabled": true, // power mode 활성화
   "powermode.shake.enabled": false, // power mode 화면이 흔들림 활성화 여부
   "powermode.presets": "fireworks", // power mode 효과
-
-  "redhat.telemetry.enabled": false, // redhat yaml 관련 팝업 계속 떠서 비활성화
 
   // k8s 확장 관련해서 에러가 나와서 install 눌었더니 생김 딱히 중요한 설정은 아닌거 같으며 그냥 파일 경로인 거 같습니다.
   // 계속 에러 경고를 보고 싶지 않음으로 필요에 따라 삭제하도록 합니다.
@@ -188,14 +193,9 @@
   "csharp.inlayHints.types.enabled": true,
   "csharp.inlayHints.types.forImplicitObjectCreation": true,
   "csharp.inlayHints.types.forImplicitVariableTypes": true,
-  "csharp.inlayHints.types.forLambdaParameterTypes": true,
+  "csharp.inlayHints.types.forLambdaParameterTypes": true
 
   /* 실험 */
-
-  "diffEditor.ignoreTrimWhitespace": false,
-  "terminal.integrated.shellIntegration.enabled": true, // [쉘 통합 ZSH과의 기능을 기대하여 활성화](https://code.visualstudio.com/updates/v1_69#_shell-integration)
-  "editor.experimental.stickyScroll.enabled": true,
-  "window.zoomLevel": 0
 
   /* EOF */
 }
