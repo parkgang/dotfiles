@@ -1,36 +1,38 @@
 {
   "profiles": {
     "defaults": {
-      "colorScheme": "Chester",
-      "fontFace": "MesloLGS NF",
-      "useAcrylic": true,
-      "acrylicOpacity": 0.5,
-      "startingDirectory": "C:\\Users\\%USERNAME%\\Downloads"
+      "colorScheme": "FishTank",
+      "font": {
+        "face": "MesloLGS NF"
+      },
+      "opacity": 70,
+      "startingDirectory": "C:\\Users\\%USERNAME%\\Downloads",
+      "useAcrylic": true
     }
   },
   "schemes": [
     {
-      "name": "Chester",
-      "black": "#080200",
-      "red": "#fa5e5b",
-      "green": "#16c98d",
-      "yellow": "#ffc83f",
-      "blue": "#288ad6",
-      "purple": "#d34590",
-      "cyan": "#28ddde",
-      "white": "#e7e7e7",
-      "brightBlack": "#6f6b68",
-      "brightRed": "#fa5e5b",
-      "brightGreen": "#16c98d",
-      "brightYellow": "#feef6d",
-      "brightBlue": "#278ad6",
-      "brightPurple": "#d34590",
-      "brightCyan": "#27dede",
-      "brightWhite": "#ffffff",
-      "background": "#2c3643",
-      "foreground": "#ffffff",
-      "selectionBackground": "#67747c",
-      "cursorColor": "#b4b1b1"
+      "name": "FishTank",
+      "black": "#03073c",
+      "red": "#c6004a",
+      "green": "#acf157",
+      "yellow": "#fecd5e",
+      "blue": "#525fb8",
+      "purple": "#986f82",
+      "cyan": "#968763",
+      "white": "#ecf0fc",
+      "brightBlack": "#6c5b30",
+      "brightRed": "#da4b8a",
+      "brightGreen": "#dbffa9",
+      "brightYellow": "#fee6a9",
+      "brightBlue": "#b2befa",
+      "brightPurple": "#fda5cd",
+      "brightCyan": "#a5bd86",
+      "brightWhite": "#f6ffec",
+      "background": "#232537",
+      "foreground": "#ecf0fe",
+      "selectionBackground": "#fcf7e9",
+      "cursorColor": "#fecd5e"
     }
   ]
 }
