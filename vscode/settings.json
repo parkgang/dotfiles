@@ -41,6 +41,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
 
   "window.commandCenter": true, // [커맨드 센터 중앙으로 배치](https://code.visualstudio.com/updates/v1_69#_command-center)
+  "window.confirmBeforeClose": "keyboardOnly", // vim 사용하면서 대부분 액션을 키보드로 조작하게 되었는데 그러면서 실수로 `ctrl` + `shift` + `w` 를 누르며 VSCode가 종료되는 경험이 반복되어 컨펌 창 추가
 
   "git.autofetch": true, // vscode에서 주기적으로 git fetch하는 기능 활성화: 오른쪽 하단에 자동 알림화면에 뜨길래 설정함
 
