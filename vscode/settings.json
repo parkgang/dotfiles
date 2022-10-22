@@ -106,15 +106,17 @@
 
   // Vim 설정: 해당 설정에서 조정이 안되는 것은 keybindings.json 에도 있습니다
   "vim.handleKeys": {
-    "<C-c>": false,
-    "<C-v>": false,
-    "<C-x>": false,
-    "<C-z>": false,
-    "<C-a>": false,
+    // 숫자 감소시키기 하려고
+    // "<C-x>": false,
+    // 숫자 증가시키기 하려고
+    // "<C-a>": false,
     // 반 페이지 스크롤 하려고
     // "<C-d>": false,
     // vim 네이티브로 window 이동 하려고
     // "<C-w>": false,
+    "<C-z>": false,
+    "<C-c>": false,
+    "<C-v>": false,
     "<C-f>": false,
     "<C-pageup>": false,
     "<C-pagedown>": false
