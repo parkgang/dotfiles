@@ -32,3 +32,12 @@ end)
 hs.hotkey.bind({"option"}, "4", function()
   hs.application.launchOrFocus("Notion")
 end)
+
+
+
+--
+--
+-- 윈도우 힌트
+-- 힌트 키를 왼손으로만 입력할 수 있도록 힌트에 표시되는 키 리스트 변경
+hs.hints.hintChars = {'1', '2', '3', '4', 'Q', 'W', 'E', 'R'}
+hs.hotkey.bind({'shift'}, 'F1', hs.hints.windowHints)
