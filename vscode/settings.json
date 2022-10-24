@@ -104,25 +104,29 @@
     "vscode-kubernetes.helm-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
   },
 
+  // 2022-10-23자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다
   // Vim 설정: 해당 설정에서 조정이 안되는 것은 keybindings.json 에도 있습니다
-  "vim.handleKeys": {
-    // 숫자 감소시키기 하려고
-    // "<C-x>": false,
-    // 숫자 증가시키기 하려고
-    // "<C-a>": false,
-    // 반 페이지 스크롤 하려고
-    // "<C-d>": false,
-    // vim 네이티브로 window 이동 하려고
-    // "<C-w>": false,
-    "<C-z>": false,
-    "<C-c>": false,
-    "<C-v>": false,
-    "<C-f>": false,
-    "<C-pageup>": false,
-    "<C-pagedown>": false
-  },
-  // "+p와 같은 방식으로 복붙하기 불편함으로 시스템 클립보드와 연동
-  "vim.useSystemClipboard": true,
+  // "vim.handleKeys": {
+  //   // 숫자 감소시키기 하려고
+  //   // "<C-x>": false,
+  //   // 숫자 증가시키기 하려고
+  //   // "<C-a>": false,
+  //   // 반 페이지 스크롤 하려고
+  //   // "<C-d>": false,
+  //   // vim 네이티브로 window 이동 하려고
+  //   // "<C-w>": false,
+  //   "<C-z>": false,
+  //   "<C-c>": false,
+  //   "<C-v>": false,
+  //   "<C-f>": false,
+  //   "<C-pageup>": false,
+  //   "<C-pagedown>": false
+  // },
+  // // "+p와 같은 방식으로 복붙하기 불편함으로 시스템 클립보드와 연동
+  // "vim.useSystemClipboard": true,
+
+  "vscode-neovim.useWSL": true, // WSL에서 nvim 사용하기 위함
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim", // linux에서 까지는 테스트를 안해보았지만 WSL에서 테스트 결과 WSL에서만 호출되는 경로 입니다: "which nvim" 으로 나온 경로를 입력합니다.
 
   /* language */
 
