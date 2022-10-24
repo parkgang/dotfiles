@@ -1,14 +1,15 @@
 // 키 바인딩을 이 파일에 넣어서 기본값 재정의
 [
+  // 2022-10-23자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다
   // Vim 키 충돌 해결 (vim.handleKeys 으로 해결안되는 것을 명시)
-  {
-    "key": "shift+alt+up",
-    "command": "-extension.vim_cmd+alt+up"
-  },
-  {
-    "key": "shift+alt+down",
-    "command": "-extension.vim_cmd+alt+down"
-  },
+  // {
+  //   "key": "shift+alt+up",
+  //   "command": "-extension.vim_cmd+alt+up"
+  // },
+  // {
+  //   "key": "shift+alt+down",
+  //   "command": "-extension.vim_cmd+alt+down"
+  // },
   // NeoVim 키 충돌 해결
   {
     "key": "ctrl+z",
