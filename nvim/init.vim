@@ -75,3 +75,19 @@ iabbr <expr> __name expand('%')
 iabbr <expr> __pwd expand('%:p:h')
 iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
 iabbr <expr> __uuid system("uuidgen")
+
+
+
+"
+"
+" Windows with WSL
+" WSL에서 yank한 것을 Ctrl + v에서도 사용할 수 있도록
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+" Ctrl + c를 WSL에서 "+p 으로 사용할 수 있도록
+noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -Command Get-Clipboard')<CR>
