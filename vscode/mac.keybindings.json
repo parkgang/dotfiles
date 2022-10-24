@@ -5,4 +5,5 @@
     "key": "cmd+q cmd+q",
     "command": "workbench.action.terminal.focus"
   }
+  // macOS의 경우 Windows와 다르게 control key가 있어서 vim 관련 단축키 충돌이 거의 없습니다.
 ]
