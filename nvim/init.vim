@@ -89,5 +89,5 @@ if executable(s:clip)
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
     augroup END
 endif
-" Ctrl + c를 WSL에서 "+p 으로 사용할 수 있도록
+" Ctrl + c 값을 WSL에서 "+p 으로 사용할 수 있도록 (단축키 매핑을 보면 알겠지만 <C-r>+ 에서는 사용할 수 없습니다)
 noremap "+p :exe 'norm a'.system('/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -Command Get-Clipboard')<CR>
