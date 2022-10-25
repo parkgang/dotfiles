@@ -1,5 +1,21 @@
 // 키 바인딩을 이 파일에 넣어서 기본값 재정의
 [
+  // Terminal 크기 조정을 위하여 추가
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
   // 2022-10-23자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다
   // Vim 키 충돌 해결 (vim.handleKeys 으로 해결안되는 것을 명시)
   // {
