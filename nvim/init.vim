@@ -79,3 +79,12 @@ iabbr <expr> __name expand('%')
 iabbr <expr> __pwd expand('%:p:h')
 iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
 iabbr <expr> __uuid system("uuidgen")
+
+
+
+"
+"
+" VSCode
+if exists('g:vscode')
+    echo "Neovim이 VSCode에서 실행 중 입니다 ✨"
+endif
