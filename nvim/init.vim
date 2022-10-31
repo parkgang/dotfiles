@@ -56,9 +56,6 @@ set tabstop=2
 " `>>` 와 같은 작업 시 4칸 띄우도록
 set shiftwidth=2
 
-" [<C-r>으로 클립보드를 붙어넣더라도 자동으로 개행되지 않도록](https://www.lesstif.com/system-admin/vim-code-paste-auto-indent-6979764.html)
-set paste
-
 " 편집기를 실행하자마자 폴딩되어있지 않도록
 set nofoldenable
 " 들여쓰기를 기준으로 폴딩을 수행합니다. 같은 들여쓰기 수준이면 같은 폴딩 레벨을 지닙니다.
@@ -81,6 +78,8 @@ set langmap=ㅁa,ㅠb,ㅊc,ㅇd,ㄷe,ㄹf,ㅎg,ㅗh,ㅑi,ㅓj,ㅏk,ㅣl,ㅡm,ㅜ
 nnoremap <C-j> o<ESC>
 " 위로 개행이 불편해서 맵핑
 nnoremap <C-k> O<ESC>
+" 클립보드의 내용이 개행되지 않게 붙어넣을 수 있도록
+" inoremap <c-r> <c-r><c-o>
 
 
 
@@ -112,4 +111,8 @@ if exists('g:vscode')
     nnoremap zo :call VSCodeNotify('editor.unfold')<CR>
     nnoremap zO :call VSCodeNotify('editor.unfoldRecursively')<CR>
     nnoremap za :call VSCodeNotify('editor.toggleFold')<CR>
+else
+    " [<C-r>으로 클립보드를 붙어넣더라도 자동으로 개행되지 않도록](https://www.lesstif.com/system-admin/vim-code-paste-auto-indent-6979764.html)
+    " 이유는 모르겠으나 해당 옵션을 활성화 하면 `VSCode` 에서 `:q` 사용시 `nvim` 이 종료되는 버그가 있습니다.
+    set paste
 endif
