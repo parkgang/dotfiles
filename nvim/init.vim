@@ -79,7 +79,7 @@ nnoremap <C-j> o<ESC>
 " 위로 개행이 불편해서 맵핑
 nnoremap <C-k> O<ESC>
 " 클립보드의 내용이 개행되지 않게 붙어넣을 수 있도록
-" inoremap <c-r> <c-r><c-o>
+inoremap <C-r> <C-r><C-o>
 
 
 
