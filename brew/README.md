@@ -1,9 +1,12 @@
 ## Overview
 
-자세한 사용법은 개인 노션을 참고합니다.
+원래는 한개의 `Brewfile` 를 가지고 `OS` 변수로 구분해서 `mac` 환경과 `linux` 모두 가능하도록 하려고 했지만 설치 및 삭제마다 `brew bundle -f dump` 으로 손쉽게 생성도 못하고 `diff` 도 어려워서 그냥 `OS` 환경별로 `Brewfile` 를 생성하는 전략을 택했습니다.
 
-## Brewfile 만들기
+## 사용법
+
+> 각 `OS` 에 맞는 디렉터리로 이동하여 수행하면 됩니다.
 
 ```shell
-brew bundle -f dump
+brew cleanup && brew bundle -f dump
+brew bundle
 ```
