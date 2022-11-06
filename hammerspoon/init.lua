@@ -32,6 +32,9 @@ end)
 hs.hotkey.bind({"option"}, "4", function()
   hs.application.launchOrFocus("Notion")
 end)
+hs.hotkey.bind({"option"}, "5", function()
+  hs.application.launchOrFocus("TextEdit")
+end)
 
 
 
