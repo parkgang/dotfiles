@@ -1,9 +1,25 @@
+; `git lfs install` 실행시 자동으로 지정된 설정입니다.
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [user]
 	name = 박경은
 	email = 
+
+[core]
+	editor = vim
+	; [한글 파일명인 경우 발생하는 이슈를 대응하기 위함](https://subicura.com/mac/dev/intel.html#git)
+	precomposeunicode = true
+	quotepath = false
+
+[init]
+	defaultBranch = main
+
+; WSL에서 Windows 자격 증명 관리자를 사용하기 위함
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[core]
-	editor = vim
