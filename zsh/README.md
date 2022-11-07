@@ -4,6 +4,8 @@
    1. 제가 수정된 `.zshrc` 부분만 궁금하면 [zshrc.zsh-template](https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template) 파일과 `diff` 를 하면 알아낼 수 있습니다.
 1. `p10k` theme를 사용하고 있는데 테마 설정도 `code` 로써 분리되길래 형상관리로 가능할 거 같아 추가는 해 놓았습니다.
    1. 그럼에도 코드보다 `p10k 마법사` 로 설정하는 것이 더 쉽고 직관적이며 형상관리 되는 파일은 내가 이전에 설정한 `theme` 와 달라진 것이 있는지 없는지를 확인하기 위한 용도로 사용하도록 합니다.
+1. `.zprofile` 의 경우 파일 내용을 보면 `linux` 환경에서 `brew` 를 사용하기 위해서 존재하는 파일인데 `WSL` 기준으로 작성되어 `WSL` 환경 이외 필요한 파일은 아닙니다.
+   1. `mscOS` 환경의 경우 배치하지 않도록 합니다.
 
 ## 사용법
 
