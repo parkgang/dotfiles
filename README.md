@@ -1,3 +1,18 @@
+<p align="center">
+  <table align="center">
+    <tbody>
+      <tr>
+        <td>
+          <img src="https://user-images.githubusercontent.com/63892989/200370910-9eaff741-fc4e-4f58-8c7f-34b1c7a98f93.png" alt="Windows Terminal" width="500" />
+        </td>
+        <td>
+          <img src="https://user-images.githubusercontent.com/63892989/200372315-4b39b498-5f78-4d37-ae92-b7e829f9a135.png" alt="iTerm2" width="500" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</p>
+
 # dotfiles
 
 제 설정 파일 들입니다. `Windows` , `WSL2` , `macOS` 을 타겟으로 합니다.
