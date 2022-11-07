@@ -11,6 +11,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# WSL2에서 미설정으로 powerlevel10k prompt styles 문제 발생
+export LANG="en_US.UTF-8"
+
 export EDITOR="nvim"
 
 # nvm 환경변수
