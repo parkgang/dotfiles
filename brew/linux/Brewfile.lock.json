@@ -5,7 +5,7 @@
         "revision": "44e38faac626ac1f89543bf11467cf81ada43ae6"
       },
       "homebrew/core": {
-        "revision": "2192f860c7f4fbccff5d2be350fae32bf846c502"
+        "revision": "d6784304520ef6bb4e582405dadf9b695fc7bada"
       }
     },
     "brew": {
@@ -366,7 +366,7 @@
       "Ubuntu 20.04.5 LTS (focal)": {
         "HOMEBREW_VERSION": "3.6.8",
         "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
-        "Homebrew/linuxbrew-core": "2192f860c7f4fbccff5d2be350fae32bf846c502",
+        "Homebrew/linuxbrew-core": "d6784304520ef6bb4e582405dadf9b695fc7bada",
         "GCC": ""
       }
     }
