@@ -1,10 +1,11 @@
-## settings.json
+## Overview
 
-> 포멧 할때 마다 설정하기 귀찮아서 아래의 존재하는 property만 건드립니다. 해당 부분만 교체하세요
+1. `VSCode` 처럼 변경한 설정만 깔끔하게 노출되지 않고 건드리지 않아도 기본으로 노출되는 설정이 있어서 파일로 관리하기 찝찝합니다.
+1. 그래도 방법으로 `settings.json` 내용을 모두 날리고 저장하면 기본 값으로 돌아온다고 합니다.
+   > https://www.thewindowsclub.com/reset-windows-terminal-settings-to-default
+1. 제가 수정한 부분이 궁금하면 `Windows Terminal` 의 `settings.json` 을 모두 제거 후 저장해서 나온 데이터와 해당 repo에서 관리되는 설정 값을 `diff` 하면 됩니다.
+   > 아마 `profiles.defaults` 부분과 `theme` 관련만 중점으로 변경됐을 것입니다.
 
-1. 기존 `schemes` 모두 제거하고 아래의 Reference 선택한 Theme만 복붙 후 `colorScheme` 선택
-2. 폰트
-   1. zsh의 `powerlevel10k` 테마에서 많이 사용되는 `MesloLGS NF` 사용
-   2. 전략적으로 vscode와 동일하기 위함
-3. 투명도 설정
-4. only cloud 전략을 사용하기 때문에 모든 작업은 `Downloads` 에서 진행하도록 합니다. 이에 따라 Terminal 기본 경로를 `Downloads` 으로 변경합니다.
+## 사용법
+
+1. `Windows Terminal` 을 실행해서 `Json` 파일을 열고 `settings.json` 을 붙어넣으면 됩니다.

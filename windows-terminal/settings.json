@@ -1,38 +1,95 @@
 {
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": "paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "keys": "ctrl+c"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+d"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
   "profiles": {
     "defaults": {
-      "colorScheme": "FishTank",
+      "colorScheme": "Snazzy",
       "font": {
         "face": "MesloLGS NF"
       },
-      "opacity": 70,
       "startingDirectory": "C:\\Users\\%USERNAME%\\Downloads",
+      "opacity": 70,
       "useAcrylic": true
-    }
+    },
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "\uba85\ub839 \ud504\ub86c\ud504\ud2b8"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl",
+        "startingDirectory": "~"
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      }
+    ]
   },
   "schemes": [
     {
-      "name": "FishTank",
-      "black": "#03073c",
-      "red": "#c6004a",
-      "green": "#acf157",
-      "yellow": "#fecd5e",
-      "blue": "#525fb8",
-      "purple": "#986f82",
-      "cyan": "#968763",
-      "white": "#ecf0fc",
-      "brightBlack": "#6c5b30",
-      "brightRed": "#da4b8a",
-      "brightGreen": "#dbffa9",
-      "brightYellow": "#fee6a9",
-      "brightBlue": "#b2befa",
-      "brightPurple": "#fda5cd",
-      "brightCyan": "#a5bd86",
-      "brightWhite": "#f6ffec",
-      "background": "#232537",
-      "foreground": "#ecf0fe",
-      "selectionBackground": "#fcf7e9",
-      "cursorColor": "#fecd5e"
+      "name": "Snazzy",
+      "black": "#000000",
+      "red": "#fc4346",
+      "green": "#50fb7c",
+      "yellow": "#f0fb8c",
+      "blue": "#49baff",
+      "purple": "#fc4cb4",
+      "cyan": "#8be9fe",
+      "white": "#ededec",
+      "brightBlack": "#555555",
+      "brightRed": "#fc4346",
+      "brightGreen": "#50fb7c",
+      "brightYellow": "#f0fb8c",
+      "brightBlue": "#49baff",
+      "brightPurple": "#fc4cb4",
+      "brightCyan": "#8be9fe",
+      "brightWhite": "#ededec",
+      "background": "#1e1f29",
+      "foreground": "#ebece6",
+      "selectionBackground": "#81aec6",
+      "cursorColor": "#e4e4e4"
     }
   ]
 }
