@@ -3,10 +3,10 @@
     <tbody>
       <tr>
         <td>
-          <img src="https://user-images.githubusercontent.com/63892989/200370910-9eaff741-fc4e-4f58-8c7f-34b1c7a98f93.png" alt="Windows Terminal" width="500" />
+          <img src="./windows-terminal.png" alt="Windows Terminal" width="500" />
         </td>
         <td>
-          <img src="https://user-images.githubusercontent.com/63892989/200374570-d8a53250-53a1-4b2e-9bf1-e0b6eca39668.png" alt="iTerm2" width="470" />
+          <img src="./iterm2.png" alt="iTerm2" width="470" />
         </td>
       </tr>
     </tbody>
