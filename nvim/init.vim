@@ -53,7 +53,7 @@ set title
 " tab 간격 조절
 set tabstop=2
 
-" `>>` 와 같은 작업 시 4칸 띄우도록
+" `>>` 와 같은 작업 시 띄울 값
 set shiftwidth=2
 
 " 편집기를 실행하자마자 폴딩되어있지 않도록
@@ -80,12 +80,55 @@ nnoremap <C-j> o<ESC>
 nnoremap <C-k> O<ESC>
 " 클립보드의 내용이 개행되지 않게 붙어넣을 수 있도록
 inoremap <C-r> <C-r><C-o>
+" 복사 레지스터 기능 보강
+nnoremap Y y$
+" 블랙홀 레지스터 쉽게 호출할 수 있도록 맵핑
+nnoremap <Space>x "_x
+vnoremap <Space>x "_x
+
+nnoremap <Space>X "_X
+vnoremap <Space>X "_X
+
+nnoremap <Space>s "_s
+vnoremap <Space>s "_s
+
+nnoremap <Space>S "_S
+vnoremap <Space>S "_S
+
+nnoremap <Space>c "_c
+vnoremap <Space>c "_c
+
+nnoremap <Space>C "_C
+vnoremap <Space>C "_C
+
+nnoremap <Space>d "_d
+vnoremap <Space>d "_d
+
+nnoremap <Space>D "_D
+vnoremap <Space>D "_D
+
+nnoremap <Space>dd "_dd
+vnoremap <Space>dd "_dd
+" OS 클립보드 쉽게 호출할 수 있도록 맵핑
+nnoremap <Space>p "+p
+nnoremap <Space>P "+P
 
 
 
 "
 "
-" iabbr
+" 레지스터
+" <C-a> 단축키를 희생했음으로 편하게 전체 선택을 위한 메크로
+let @a="ggVG"
+
+
+
+"
+"
+" 축약어(abbreviation)
+" [Markdown 링크를 손쉽게 추가하기 위한 약어 이며 해당 링크의 컨셉을 참고함](https://stackoverflow.com/a/23428118/14471375)
+iabbr __l []()<C-o>2<Left>
+iabbr __name parkgang
 iabbr __email ruddms936@naver.com
 iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
 iabbr <expr> __date strftime("%Y-%m-%d")
@@ -117,5 +160,6 @@ if exists('g:vscode')
 else
     " [<C-r>으로 클립보드를 붙어넣더라도 자동으로 개행되지 않도록](https://www.lesstif.com/system-admin/vim-code-paste-auto-indent-6979764.html)
     " 이유는 모르겠으나 해당 옵션을 활성화 하면 `VSCode` 에서 `:q` 사용시 `nvim` 이 종료되는 버그가 있습니다.
-    set paste
+    " 또한, 해당 옵션 활성화하면 iabbr가 동작하지 않아 비활성화 처리하였습니다.
+    " set paste
 endif
