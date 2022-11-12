@@ -36,7 +36,8 @@
     "strings": "on",
     "other": "on"
   },
-  "editor.stickyScroll.enabled": true, // [Sticky Scroll](https://code.visualstudio.com/updates/v1_71#_sticky-scroll)
+  // 다른 파일로 이동 시 이전에 남아있던 sticky가 남아있는 버그가 있어서 비활성화 처리
+  // "editor.stickyScroll.enabled": true, // [Sticky Scroll](https://code.visualstudio.com/updates/v1_71#_sticky-scroll)
 
   "diffEditor.ignoreTrimWhitespace": false,
 
