@@ -7,6 +7,8 @@ call plug#begin()
 Plug 'tpope/vim-surround'
 " 숫자 이외 <C-a> , <C-x> 시 반대 요소로 변경할 수 있도록
 Plug 'tenfyzhong/axring.vim'
+" f 시리즈로 한글을 검색할 수 있도록
+Plug 'johngrib/vim-f-hangul'
 
 call plug#end()
 
