@@ -20,6 +20,13 @@
   {
     "key": "cmd+q cmd+q",
     "command": "workbench.action.terminal.focus"
+  },
+  // NOTE: macOS의 경우 Windows와 다르게 control key가 있어서 vim 관련 단축키 충돌이 거의 없습니다.
+  // [VSCode translator를 위해 아래의 단축키 입력시 nvim의 명령을 send할 수 있도록 정의](https://github.com/vscode-neovim/vscode-neovim#adding-keybindings)
+  {
+    "command": "vscode-neovim.send",
+    "key": "shift+cmd+t",
+    "when": "editorTextFocus && neovim.mode == 'visual'",
+    "args": "<C-S-T>"
   }
-  // macOS의 경우 Windows와 다르게 control key가 있어서 vim 관련 단축키 충돌이 거의 없습니다.
 ]
