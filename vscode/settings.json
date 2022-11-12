@@ -133,8 +133,11 @@
   /* markdown */
 
   "markdown.experimental.editor.pasteLinks.enabled": true, // [마크다운 링크를 삽입할 파일 붙여넣기](https://code.visualstudio.com/updates/v1_68#_paste-files-to-insert-markdown-links)
-  "markdown.experimental.updateLinksOnFileMove.enabled": "always", // [파일 이동 및 이름 변경 시 마크다운 링크 업데이트](https://code.visualstudio.com/updates/v1_71#_markdown-link-update-on-file-move-and-rename)
+  // [파일 이동 및 이름 변경 시 마크다운 링크 업데이트](https://code.visualstudio.com/updates/v1_71#_markdown-link-update-on-file-move-and-rename)
+  // [정식 기능으로 출시](https://code.visualstudio.com/updates/v1_73#_markdown-automatic-link-updates-on-file-rename-move)
+  "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.enabled": true, // [마크다운 링크 유효성 검사](https://code.visualstudio.com/updates/v1_72#_markdown-link-validation)
+  "markdown.occurrencesHighlight.enabled": true, // [마크다운 링크 발생 강조 표시](https://code.visualstudio.com/updates/v1_73#_markdown-link-occurrence-highlighting)
 
   /* JS/TS */
 
