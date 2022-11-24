@@ -32,6 +32,8 @@ x::Del
 ;
 ;
 ; [Ctrl+Space로 한/영 전환](https://kwonkyo.tistory.com/406)
+/*
 ^Space::
   send, {vk15sc138}
 return
+*/
