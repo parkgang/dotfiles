@@ -39,9 +39,11 @@
     "key": "ctrl+v",
     "command": "-vscode-neovim.send"
   },
+  // 다른거랑 다르게 `ctrl+f` 는 아래와 같이 제거하야지 `바로 가기 키` 에서 검색 시 조회되지 않음: `관련 단축키를 `바로 가기 키` 에서 검색해서 바인딩 제거한 값 입니다.
   {
     "key": "ctrl+f",
-    "command": "-vscode-neovim.send"
+    "command": "-vscode-neovim.ctrl-f",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
   },
   // [VSCode translator를 위해 아래의 단축키 입력시 nvim의 명령을 send할 수 있도록 정의](https://github.com/vscode-neovim/vscode-neovim#adding-keybindings)
   {

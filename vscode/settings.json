@@ -24,7 +24,8 @@
   "editor.formatOnPaste": true,
   "editor.suggest.preview": true, // [제안 미리보기가 활성화](https://code.visualstudio.com/updates/v1_60#_inline-suggestions-in-autocomplete)
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true // For ESLint
+    "source.fixAll.eslint": true, // For ESLint
+    "source.organizeImports": true // [사용하지 않는 import 제거](https://webruden.tistory.com/1069)
   },
   "editor.bracketPairColorization.enabled": true, // [native bracket 사용](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2#how-to-enable-native-bracket-matching)
   // [수평 브래킷 가이드 사용](https://code.visualstudio.com/updates/v1_67#_bracket-guide-improvements)
@@ -228,17 +229,17 @@
       "savePassword": true,
       "profileName": "nanumsem localhost for WSL"
     }
-  ],
+  ]
 
-  "extensions.experimental.affinity": {
-    // 최근에 문서에 추가된 내용 같은데 하는 역할이 nvim 관련 확장 프로그램이 독립적인 스레드로 돌아가서 성능개선이 있다고 합니다
-    // 이외 제가 스트레스 받았던 paste 문제도 해결된다고 하는데 아직 issue가 open 되어있기도 하고 어떤 Side Effect를 유발할지 모름으로 실험에 배치하였습니다.
-    // 이전에는 해당 옵션 유무와 관계 없이 nvim이 잘 동작했음을 참고하세요.
-    // [문서 커밋 내용](https://github.com/vscode-neovim/vscode-neovim/commit/4be125b5adf0a9e12ae0b07bd3cf4552aa980c6e)
-    // [관련 이슈](https://github.com/vscode-neovim/vscode-neovim/issues/1051)
-    // [관련 PR](https://github.com/vscode-neovim/vscode-neovim/pull/948)
-    "asvetliakov.vscode-neovim": 1
-  }
+  // "extensions.experimental.affinity": {
+  //   // 최근에 문서에 추가된 내용 같은데 하는 역할이 nvim 관련 확장 프로그램이 독립적인 스레드로 돌아가서 성능개선이 있다고 합니다
+  //   // 이외 제가 스트레스 받았던 paste 문제도 해결된다고 하는데 아직 issue가 open 되어있기도 하고 어떤 Side Effect를 유발할지 모름으로 실험에 배치하였습니다.
+  //   // 이전에는 해당 옵션 유무와 관계 없이 nvim이 잘 동작했음을 참고하세요.
+  //   // [문서 커밋 내용](https://github.com/vscode-neovim/vscode-neovim/commit/4be125b5adf0a9e12ae0b07bd3cf4552aa980c6e)
+  //   // [관련 이슈](https://github.com/vscode-neovim/vscode-neovim/issues/1051)
+  //   // [관련 PR](https://github.com/vscode-neovim/vscode-neovim/pull/948)
+  //   "asvetliakov.vscode-neovim": 1
+  // }
 
   /* EOF */
 }
