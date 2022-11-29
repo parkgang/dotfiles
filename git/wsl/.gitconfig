@@ -21,11 +21,22 @@
 	defaultBranch = main
 
 [alias]
+	; TODO: -r 으로 하면 HEAD으로 이동해서 어색함 remote만 선택할 수 있는 것이 있는지 찾아보기
 	ch = "!git checkout $(git branch | fzf)"
-	; -r 으로 하면 HEAD으로 이동해서 어색함 remote만 선택할 수 있는 것이 있는지 찾아보기
 	chr = "!git checkout $(git branch -r | fzf)"
-	sync = "!git fetch && git pull"
-	; TODO: branch 정리하는 것
+	fp = "!git fetch && git pull"
+	; [remote에 없는 불필요한 local branch를 정리합니다](https://blackun.tistory.com/189)
+	clean-local-branch-not-remote = "! \
+		# remote 업데이트 \n \
+		git remote update -p && \
+		# local 브랜치 목록을 verbose으로 출력: -v가 아닌 -vv의 경우 branch name까지 표시되는데 해당 값을 정규식 필터링 값으로 소비하게 됨 \n \
+		git branch -vv | \
+		# remote에 없으면서 local에 남아있는 branch 필터링 \n \
+		grep 'origin/.*: gone]' | \
+		# list에서 branch name 추출 \n \
+		awk '{print $1}' | \
+		# 출력된 결과를 이용해 branch 제거: 위험하게 -D를 사용한 이유로 remote에 없는데 local branch에 무언가가 남아서 삭제 못하는 case가 있다는 것은 branch가 잘못 관리되었거나 신경 쓰고 싶지 않은 경우일 것 \n \
+		xargs git branch -D"
 
 ; WSL에서 Windows 자격 증명 관리자를 사용하기 위함
 [credential]
