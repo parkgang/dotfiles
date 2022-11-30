@@ -52,5 +52,4 @@
     "when": "editorTextFocus && neovim.mode == 'visual'",
     "args": "<C-S-T>"
   }
-  // EOF
 ]
