@@ -37,7 +37,16 @@
 		awk '{print $1}' | \
 		# 출력된 결과를 이용해 branch 제거: 위험하게 -D를 사용한 이유로 remote에 없는데 local branch에 무언가가 남아서 삭제 못하는 case가 있다는 것은 branch가 잘못 관리되었거나 신경 쓰고 싶지 않은 경우일 것 \n \
 		xargs git branch -D"
-
+	; push 등 남은 git 작업이 있는지 확인
+	repos-status = "! \
+		# 리스트 출력: 혹시라도 .으로 시작하는 repo가 있을지 몰라 -a으로 조회 \n \
+		ls -al | \
+		# [디렉터리 이름만 추출](https://m.blog.naver.com/kmhc/197826798) \n \
+		awk '/^d/{print $NF}' | \
+		# -a으로 출력했음으로 `.` , `..` 는 제외 \n \
+		grep '[^.]' | \
+		# repo의 디렉터리를 순회하면서 git status 확인 \n \
+		xargs -L 1 bash -c 'cd "$0" && echo -n "🗂️" && basename $PWD && git status -s || true && echo ""'"
 ; WSL에서 Windows 자격 증명 관리자를 사용하기 위함
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
