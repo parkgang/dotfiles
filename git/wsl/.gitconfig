@@ -46,7 +46,7 @@
 		# -a으로 출력했음으로 `.` , `..` 는 제외 \n \
 		grep '[^.]' | \
 		# repo의 디렉터리를 순회하면서 git status 확인 \n \
-		xargs -L 1 bash -c 'cd "$0" && echo -n "🗂️" && basename $PWD && git status -s || true && echo ""'"
+		xargs -L 1 bash -c 'cd "$0" && echo -n "🗂️  " && basename $PWD && git status -s || true && echo ""'"
 ; WSL에서 Windows 자격 증명 관리자를 사용하기 위함
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
