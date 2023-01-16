@@ -55,7 +55,7 @@
     "when": "editorTextFocus && neovim.mode == 'visual'",
     "args": "<C-S-T>"
   },
-  // [접기 펼치기 vim 명령어와 동기화](https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1316470317)
+  // [접혀진 상태에서 vim normal에서 이동 시 펼쳐지는 문제를 해결하기 위해서 VSCode 이동과 동기화](https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1316470317)
   {
     "command": "cursorDown",
     "key": "j",
@@ -74,81 +74,6 @@
   {
     "command": "cursorUp",
     "key": "up",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.toggleFold",
-    "key": "z a",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.unfoldAll",
-    "key": "z shift+r",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldAll",
-    "key": "z shift+m",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.unfold",
-    "key": "z o",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.unfoldRecursively",
-    "key": "z shift+o",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.fold",
-    "key": "z c",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldRecursively",
-    "key": "z shift+c",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldAllExcept",
-    "key": "z shift+v",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel1",
-    "key": "z 1",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel2",
-    "key": "z 2",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel3",
-    "key": "z 3",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel4",
-    "key": "z 4",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel5",
-    "key": "z 5",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel6",
-    "key": "z 6",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "editor.foldLevel7",
-    "key": "z 7",
     "when": "editorTextFocus && neovim.mode == normal"
   }
   /// end of setting
