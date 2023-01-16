@@ -147,7 +147,7 @@ iabbr <expr> __uuid system("uuidgen")
 " VSCode
 if exists('g:vscode')
     echo "Neovim이 VSCode에서 실행 중 입니다 ✨"
-    
+
     " [폴더 접기 명령 수행시 VSCode 단축키 호출](https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-989481648)
     nnoremap zM :call VSCodeNotify('editor.foldAll')<CR>
     nnoremap zR :call VSCodeNotify('editor.unfoldAll')<CR>
