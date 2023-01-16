@@ -1,6 +1,5 @@
-// 키 바인딩을 이 파일에 넣어서 기본값 재정의
 [
-  // Terminal 크기 조정을 위하여 추가
+  /// `VSCode Terminal` 크기 조정을 위하여 추가
   {
     "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.resizePaneDown",
@@ -16,8 +15,9 @@
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
   },
-  // 2022-10-23자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다
-  // Vim 키 충돌 해결 (vim.handleKeys 으로 해결안되는 것을 명시)
+  /// end of setting
+
+  /// `2022-10-23` 자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다: Vim 키 충돌 해결 (vim.handleKeys 으로 해결안되는 것을 명시)
   // {
   //   "key": "shift+alt+up",
   //   "command": "-extension.vim_cmd+alt+up"
@@ -26,7 +26,10 @@
   //   "key": "shift+alt+down",
   //   "command": "-extension.vim_cmd+alt+down"
   // },
-  // NeoVim 키 충돌 해결
+  /// end of setting
+
+  /// Neovim 설정
+  // 키 충돌 해결
   {
     "key": "ctrl+z",
     "command": "-vscode-neovim.send"
@@ -39,8 +42,8 @@
     "key": "ctrl+v",
     "command": "-vscode-neovim.send"
   },
-  // 다른거랑 다르게 `ctrl+f` 는 아래와 같이 제거하야지 `바로 가기 키` 에서 검색 시 조회되지 않음: `관련 단축키를 `바로 가기 키` 에서 검색해서 바인딩 제거한 값 입니다.
   {
+    // 다른거랑 다르게 `ctrl+f` 는 아래와 같이 제거하야지 `바로 가기 키` 에서 검색 시 조회되지 않음: `관련 단축키를 `바로 가기 키` 에서 검색해서 바인딩 제거한 값 입니다.
     "key": "ctrl+f",
     "command": "-vscode-neovim.ctrl-f",
     "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
@@ -51,5 +54,102 @@
     "key": "ctrl+shift+t",
     "when": "editorTextFocus && neovim.mode == 'visual'",
     "args": "<C-S-T>"
+  },
+  // [접기 펼치기 vim 명령어와 동기화](https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1316470317)
+  {
+    "command": "cursorDown",
+    "key": "j",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "cursorUp",
+    "key": "k",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "cursorDown",
+    "key": "down",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "cursorUp",
+    "key": "up",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.toggleFold",
+    "key": "z a",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.unfoldAll",
+    "key": "z shift+r",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldAll",
+    "key": "z shift+m",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.unfold",
+    "key": "z o",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.unfoldRecursively",
+    "key": "z shift+o",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.fold",
+    "key": "z c",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldRecursively",
+    "key": "z shift+c",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldAllExcept",
+    "key": "z shift+v",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel1",
+    "key": "z 1",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel2",
+    "key": "z 2",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel3",
+    "key": "z 3",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel4",
+    "key": "z 4",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel5",
+    "key": "z 5",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel6",
+    "key": "z 6",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "command": "editor.foldLevel7",
+    "key": "z 7",
+    "when": "editorTextFocus && neovim.mode == normal"
   }
+  /// end of setting
 ]
