@@ -54,27 +54,6 @@
     "key": "ctrl+shift+t",
     "when": "editorTextFocus && neovim.mode == 'visual'",
     "args": "<C-S-T>"
-  },
-  // [접혀진 상태에서 vim normal에서 이동 시 펼쳐지는 문제를 해결하기 위해서 VSCode 이동과 동기화](https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1316470317)
-  {
-    "command": "cursorDown",
-    "key": "j",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "cursorUp",
-    "key": "k",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "cursorDown",
-    "key": "down",
-    "when": "editorTextFocus && neovim.mode == normal"
-  },
-  {
-    "command": "cursorUp",
-    "key": "up",
-    "when": "editorTextFocus && neovim.mode == normal"
   }
   /// end of setting
 ]

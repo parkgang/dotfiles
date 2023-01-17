@@ -148,6 +148,8 @@ iabbr <expr> __uuid system("uuidgen")
 if exists('g:vscode')
     echo "Neovim이 VSCode에서 실행 중 입니다 ✨"
 
+    "
+    "
     " [폴더 접기 명령 수행시 VSCode 단축키 호출](https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-989481648)
     nnoremap zM :call VSCodeNotify('editor.foldAll')<CR>
     nnoremap zR :call VSCodeNotify('editor.unfoldAll')<CR>
@@ -156,7 +158,19 @@ if exists('g:vscode')
     nnoremap zo :call VSCodeNotify('editor.unfold')<CR>
     nnoremap zO :call VSCodeNotify('editor.unfoldRecursively')<CR>
     nnoremap za :call VSCodeNotify('editor.toggleFold')<CR>
+    " j, k 로 이동 시 접힌 부분이 펼쳐지지 않도록: 단, 매크로를 기록하는 동안 폴드 탐색이 중단됨
+    function! MoveCursor(direction) abort
+        if(reg_recording() == '' && reg_executing() == '')
+            return 'g'.a:direction
+        else
+            return a:direction
+        endif
+    endfunction
+    nmap <expr> j MoveCursor('j')
+    nmap <expr> k MoveCursor('k')
 
+    "
+    "
     " [VSCode translator 확장에 Visual으로 선택된 부분을 전달하기 위함](https://github.com/vscode-neovim/vscode-neovim#vscode-specific-differences)
     xnoremap <C-S-T> <Cmd>call VSCodeNotifyVisual('extension.translateForKorean', 1)<CR>
 else
