@@ -21,10 +21,9 @@
 	defaultBranch = main
 
 [alias]
-	; TODO: -r 으로 하면 HEAD으로 이동해서 어색함 remote만 선택할 수 있는 것이 있는지 찾아보기
-	ch = "!git checkout $(git branch | fzf)"
-	chr = "!git checkout $(git branch -r | fzf)"
-	fp = "!git fetch && git pull"
+	sw = "!git switch $(git branch | fzf)"
+	; `origin/` 부분을 자르기 위해서 `cut` 사용, `origin/HEAD -> origin/main` 자르기 위해서 grep 사용
+	swr = "!git switch $(git branch -r | cut -d/ -f2- | grep -v "HEAD" | fzf)"
 	; [remote에 없는 불필요한 local branch를 정리합니다](https://blackun.tistory.com/189)
 	clean-local-branch-not-remote = "! \
 		# remote 업데이트 \n \
@@ -45,8 +44,8 @@
 		awk '/^d/{print $NF}' | \
 		# -a으로 출력했음으로 `.` , `..` 는 제외 \n \
 		grep '[^.]' | \
-		# repo의 디렉터리를 순회하면서 git status 확인 \n \
-		xargs -L 1 bash -c 'cd "$0" && echo -n "🗂️ " && basename $PWD && git status -s || true && echo ""'"
+		# repo의 디렉터리를 순회하면서, branch 명, cherry으로 남은 push가 있는지, status으로 남은 로컬 변경 사항이 있는지 표시 \n \
+		xargs -L 1 bash -c 'cd "$0" && echo "🗂️ $(basename $PWD)" && echo "ㅤ⤷ [$(git branch --show-current)]" && git cherry -v && git status -s || true && echo ""'"
 ; WSL에서 Windows 자격 증명 관리자를 사용하기 위함
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
