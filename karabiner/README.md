@@ -18,7 +18,7 @@
       1. `devices` 에는 변경된 단축키 맵핑 내용이 있습니다.
       1. 맵핑이 필요한 디바이스를 찾아서 해당 부분만 코드를 보고 `UI` 으로 고치던 `diff` 를 통해 바로 코드로 반영할 수 있을 것 입니다.
    1. 활성화 된 룰
-      1. `profiles.complex_modifications.rules` 의 경우 활성화 한 것만 주석으로 작성해 놓았는데 모두 [assets/complex_modifications](./assets/complex_modifications) 에 있는 설정들 입니다.
+      1. [karabiner.json](karabiner.json) 의 `profiles[0].complex_modifications.rules` 의 경우 활성화 한 것만 주석으로 작성해 놓았는데 모두 [assets/complex_modifications](./assets/complex_modifications) 에 있는 설정들 입니다.
       1. 사실 활성화 하면 `assets/complex_modifications` 의 내용이 그대로 들어가는건데 불필요한 중복코드가 발생합니다.
       1. 사용되는 룰은 모두 `assets/complex_modifications` 에 배치한 것이므로 모두 활성화 하면 되므로 굳이 `karabiner.json` 에는 명시하지 않았습니다.
    1. `fn` 맵핑 내용
