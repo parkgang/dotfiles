@@ -47,13 +47,6 @@
     "key": "ctrl+f",
     "command": "-vscode-neovim.ctrl-f",
     "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
-  },
-  // [VSCode translator를 위해 아래의 단축키 입력시 nvim의 명령을 send할 수 있도록 정의](https://github.com/vscode-neovim/vscode-neovim#adding-keybindings)
-  {
-    "command": "vscode-neovim.send",
-    "key": "ctrl+shift+t",
-    "when": "editorTextFocus && neovim.mode == 'visual'",
-    "args": "<C-S-T>"
   }
   /// end of setting
 ]

@@ -169,10 +169,6 @@ if exists('g:vscode')
     nmap <expr> j MoveCursor('j')
     nmap <expr> k MoveCursor('k')
 
-    "
-    "
-    " [VSCode translator 확장에 Visual으로 선택된 부분을 전달하기 위함](https://github.com/vscode-neovim/vscode-neovim#vscode-specific-differences)
-    xnoremap <C-S-T> <Cmd>call VSCodeNotifyVisual('extension.translateForKorean', 1)<CR>
 else
     " [<C-r>으로 클립보드를 붙어넣더라도 자동으로 개행되지 않도록](https://www.lesstif.com/system-admin/vim-code-paste-auto-indent-6979764.html)
     " 이유는 모르겠으나 해당 옵션을 활성화 하면 `VSCode` 에서 `:q` 사용시 `nvim` 이 종료되는 버그가 있습니다.
