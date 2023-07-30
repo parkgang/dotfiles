@@ -1,0 +1,12 @@
+asdf
+bat
+fasd
+fzf
+git
+git-lfs
+go
+lsd
+mas
+neovim
+nvm
+zsh
