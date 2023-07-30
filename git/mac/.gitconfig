@@ -11,10 +11,38 @@
 
 [core]
 	autocrlf = input
-	editor = vim
+	; shell의 alias으로는 반영이 안되서 여기에서 명확하게 지정하도록 합니다.
+	editor = nvim
 	; [한글 파일명인 경우 발생하는 이슈를 대응하기 위함](https://subicura.com/mac/dev/intel.html#git)
 	precomposeunicode = true
 	quotepath = false
 
 [init]
 	defaultBranch = main
+
+[alias]
+	sw = "!git switch $(git branch | fzf)"
+	; `origin/` 부분을 자르기 위해서 `cut` 사용, `origin/HEAD -> origin/main` 자르기 위해서 grep 사용
+	swr = "!git switch $(git branch -r | cut -d/ -f2- | grep -v "HEAD" | fzf)"
+	; [remote에 없는 불필요한 local branch를 정리합니다](https://blackun.tistory.com/189)
+	clean-local-branch-not-remote = "! \
+		# remote 업데이트 \n \
+		git remote update -p && \
+		# local 브랜치 목록을 verbose으로 출력: -v가 아닌 -vv의 경우 branch name까지 표시되는데 해당 값을 정규식 필터링 값으로 소비하게 됨 \n \
+		git branch -vv | \
+		# remote에 없으면서 local에 남아있는 branch 필터링 \n \
+		grep 'origin/.*: gone]' | \
+		# list에서 branch name 추출 \n \
+		awk '{print $1}' | \
+		# 출력된 결과를 이용해 branch 제거: 위험하게 -D를 사용한 이유로 remote에 없는데 local branch에 무언가가 남아서 삭제 못하는 case가 있다는 것은 branch가 잘못 관리되었거나 신경 쓰고 싶지 않은 경우일 것 \n \
+		xargs git branch -D"
+	; push 등 남은 git 작업이 있는지 확인
+	repos-status = "! \
+		# 리스트 출력: 혹시라도 .으로 시작하는 repo가 있을지 몰라 -a으로 조회 \n \
+		ls -al | \
+		# [디렉터리 이름만 추출](https://m.blog.naver.com/kmhc/197826798) \n \
+		awk '/^d/{print $NF}' | \
+		# -a으로 출력했음으로 `.` , `..` 는 제외 \n \
+		grep '[^.]' | \
+		# repo의 디렉터리를 순회하면서, branch 명, cherry으로 남은 push가 있는지, status으로 남은 로컬 변경 사항이 있는지 표시 \n \
+		xargs -L 1 bash -c 'cd "$0" && echo "🗂️ $(basename $PWD)" && echo "ㅤ⤷ [$(git branch --show-current)]" && git cherry -v && git status -s || true && echo ""'"

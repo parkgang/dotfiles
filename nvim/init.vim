@@ -10,6 +10,33 @@ Plug 'tenfyzhong/axring.vim'
 " f 시리즈로 한글을 검색할 수 있도록
 Plug 'johngrib/vim-f-hangul'
 
+" VSCode에서 사용되지 않는 것들
+if !exists('g:vscode')
+
+	" 파일 탐색을 손쉽게 하기 위해서
+	Plug 'preservim/nerdtree'
+	Plug 'Xuyuanp/nerdtree-git-plugin' " nerdtree에 git 상태를 표시하기 위해서
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " 파일 아이콘 등 하이라이팅을 위해
+
+	" 하단에 상태바 정보 보강
+	Plug 'vim-airline/vim-airline'
+	" airline 테마 지정
+	Plug 'vim-airline/vim-airline-themes'
+
+	" Git 변경사항 왼쪽에 +,- 같은 것 표시 (Airline에서 ?,?,? 와 같이 변경사항추적을 위하여 설치)
+	Plug 'airblade/vim-gitgutter'
+
+	" :Git 명령 수행 가능 (Airline에서 branch 표시하기 위하여 설치)
+	Plug 'tpope/vim-fugitive'
+
+	" 전체 검색을 위하서
+	Plug 'ctrlpvim/ctrlp.vim'
+
+	" 파일 아이콘, etc. 표시를 위해서(마지막에 로드되어야 함)
+	Plug 'ryanoasis/vim-devicons'
+
+endif
+
 call plug#end()
 
 
@@ -39,6 +66,31 @@ let axring_rings_ts = [
 let g:axring_rings = axring_rings_common 
     \ + axring_rings_js 
     \ + axring_rings_ts
+" VSCode 이외에서 사용되는 Plugins Settings
+if !exists('g:vscode')
+
+	" NERDTree
+	" [숨김 파일 기본적으로 보이도록](https://stackoverflow.com/a/5057406/14471375)
+	let NERDTreeShowHidden=1
+	" [트리에서 무시할 파일들](https://stackoverflow.com/a/53302030/14471375)
+	let NERDTreeIgnore=['\.DS_Store$', '\.git$']
+	" 손쉽게 접근할 수 있도록 단축키 확장
+	nnoremap <leader>n :NERDTreeFocus<CR>
+	nnoremap <leader>nt :NERDTreeToggle<CR>
+	" NERDTree가 기본적으로 표시되고 파일이 지정되어 있으면 해당 창으로 커서 이동
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+	" airline
+	" Powerline-font 활성화
+	let g:airline_powerline_fonts=1 
+	" Smarter tab line 활성화: 모든 파일 버퍼 출력
+	let g:airline#extensions#tabline#enabled=1
+
+	" airline theme
+	let g:airline_theme='simple'
+
+endif
 
 
 
@@ -114,6 +166,11 @@ vnoremap <Space>dd "_dd
 " OS 클립보드 쉽게 호출할 수 있도록 맵핑
 nnoremap <Space>p "+p
 nnoremap <Space>P "+P
+" [편집하는 파일 정보 클립보드로 복사](https://vim.fandom.com/wiki/Copy_filename_to_clipboard)
+" 편집하는 파일명 클립보드로 복사
+nnoremap ,cf :let @*=expand("%")<CR>
+" 편집하는 파일 절대 경로 클립보드로 복사
+nnoremap ,cp :let @*=expand("%:p")<CR>
 
 
 
@@ -122,6 +179,8 @@ nnoremap <Space>P "+P
 " 레지스터
 " <C-a> 단축키를 희생했음으로 편하게 전체 선택을 위한 메크로
 let @a="ggVG"
+" { 찾고 { 범위 반큼 비주얼로 확보
+let @s="f{v%}"
 
 
 
@@ -144,8 +203,9 @@ iabbr <expr> __uuid system("uuidgen")
 
 "
 "
-" VSCode
+" VSCode 특별 설정
 if exists('g:vscode')
+
     echo "Neovim이 VSCode에서 실행 중 입니다 ✨"
 
     "
@@ -169,9 +229,4 @@ if exists('g:vscode')
     nmap <expr> j MoveCursor('j')
     nmap <expr> k MoveCursor('k')
 
-else
-    " [<C-r>으로 클립보드를 붙어넣더라도 자동으로 개행되지 않도록](https://www.lesstif.com/system-admin/vim-code-paste-auto-indent-6979764.html)
-    " 이유는 모르겠으나 해당 옵션을 활성화 하면 `VSCode` 에서 `:q` 사용시 `nvim` 이 종료되는 버그가 있습니다.
-    " 또한, 해당 옵션 활성화하면 iabbr가 동작하지 않아 비활성화 처리하였습니다.
-    " set paste
 endif
