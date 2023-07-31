@@ -74,6 +74,8 @@ if !exists('g:vscode')
 	let NERDTreeShowHidden=1
 	" [트리에서 무시할 파일들](https://stackoverflow.com/a/53302030/14471375)
 	let NERDTreeIgnore=['\.DS_Store$', '\.git$']
+	" 기본 가로 폭 조절
+	let g:NERDTreeWinSize=40
 	" 손쉽게 접근할 수 있도록 단축키 확장
 	nnoremap <leader>n :NERDTreeFocus<CR>
 	nnoremap <leader>nt :NERDTreeToggle<CR>
@@ -168,9 +170,9 @@ nnoremap <Space>p "+p
 nnoremap <Space>P "+P
 " [편집하는 파일 정보 클립보드로 복사](https://vim.fandom.com/wiki/Copy_filename_to_clipboard)
 " 편집하는 파일명 클립보드로 복사
-nnoremap ,cf :let @*=expand("%")<CR>
+nnoremap ,cf :let @+=expand("%")<CR>
 " 편집하는 파일 절대 경로 클립보드로 복사
-nnoremap ,cp :let @*=expand("%:p")<CR>
+nnoremap ,cp :let @+=expand("%:p")<CR>
 
 
 
