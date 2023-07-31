@@ -6,15 +6,16 @@
           <img src="./windows-terminal.png" alt="Windows Terminal" width="500" />
         </td>
         <td>
-          <img src="./windows-terminal-neovim.png" alt="Windows Terminal Neovim" width="500" />
+          <img src="./windows-terminal-nvim.png" alt="Windows Terminal Neovim" width="500" />
         </td>
       </tr>
+      <!-- iterm2 캡처할 때 110X28 사이즈로 찍으면 됩니다. -->
       <tr>
         <td>
-          <img src="./iterm2.png" alt="iTerm2" width="470" />
+          <img src="./iterm2.png" alt="iTerm2" width="500" />
         </td>
         <td>
-          <!-- TODO: 사진 추가 예정 -->
+          <img src="./iterm2-nvim.png" alt="iTerm2 Neovim" width="500" />
         </td>
       </tr>
     </tbody>
