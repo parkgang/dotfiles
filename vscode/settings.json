@@ -5,7 +5,7 @@
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
 
   "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
 
   "files.autoSave": "onFocusChange", // 포커스가 손실되면 변경된 편집기는 자동으로 저장
   "files.associations": {
