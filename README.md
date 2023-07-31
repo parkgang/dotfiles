@@ -6,7 +6,15 @@
           <img src="./windows-terminal.png" alt="Windows Terminal" width="500" />
         </td>
         <td>
+          <img src="./windows-terminal-neovim.png" alt="Windows Terminal Neovim" width="500" />
+        </td>
+      </tr>
+      <tr>
+        <td>
           <img src="./iterm2.png" alt="iTerm2" width="470" />
+        </td>
+        <td>
+          <!-- TODO: 사진 추가 예정 -->
         </td>
       </tr>
     </tbody>
