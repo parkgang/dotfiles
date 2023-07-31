@@ -33,7 +33,7 @@
     "defaults": {
       "colorScheme": "Snazzy",
       "font": {
-        "face": "MesloLGS NF"
+        "face": "Hack Nerd Font"
       },
       "startingDirectory": "C:\\Users\\%USERNAME%\\Downloads",
       "opacity": 70,

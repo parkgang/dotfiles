@@ -180,7 +180,7 @@ nnoremap ,cp :let @*=expand("%:p")<CR>
 " <C-a> 단축키를 희생했음으로 편하게 전체 선택을 위한 메크로
 let @a="ggVG"
 " { 찾고 { 범위 반큼 비주얼로 확보
-let @s="f{v%}"
+let @s="f{v%"
 
 
 
