@@ -247,5 +247,11 @@
 
   /* 실험 */
 
+  // [diff 편집기 보강되었다고 하길래 써봄](https://code.visualstudio.com/updates/v1_80#_new-diff-editor)
+  "diffEditor.experimental.useVersion2": true,
+  "diffEditor.experimental.showEmptyDecorations": true,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.experimental.collapseUnchangedRegions": true
+
   /* EOF */
 }
