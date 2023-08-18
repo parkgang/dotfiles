@@ -8,4 +8,9 @@
 
 ## 사용법
 
-1. `Windows Terminal` 을 실행해서 `Json` 파일을 열고 `settings.json` 을 붙어넣으면 됩니다.
+1. `Windows Terminal` 을 실행해서 `Ctrl + ,` 으로 설정에 들어가서 `Json` 파일을 열고 `settings.json` 을 붙어넣습니다.
+1. 그러면 다르게 `diff` 되는 것들이 나올텐데 거기서 
+   - 새롭게 반영된 `필드` 들은 `dotfiles` 에 반영하고
+   - 옵션이 확장되어 필요한 것들은 복사해서 `Windows Terminal` 에 반영합니다.
+   - 이것들은 매뉴얼화 하기 어려우며 상황에 맞게 반영하면 됩니다.
+
