@@ -1,4 +1,3 @@
-asdf
 bat
 direnv
 fasd
