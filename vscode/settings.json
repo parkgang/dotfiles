@@ -3,8 +3,9 @@
   // [밝은 테마와 어두운 테마 간 전환](https://code.visualstudio.com/updates/v1_69#_toggle-between-light-and-dark-themes)
   "workbench.preferredLightColorTheme": "GitHub Light Default",
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none", // VSCode 시작 시 시작 매뉴 보이지 않도록
+
   "terminal.integrated.fontFamily": "MesloLGS NF",
 
   "files.autoSave": "onFocusChange", // 포커스가 손실되면 변경된 편집기는 자동으로 저장
@@ -19,6 +20,7 @@
 
   /* Editor */
 
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -45,7 +47,6 @@
   // Diff 편집기가 선행 또는 후행 공백의 변경 내용을 무시하지 않도록
   "diffEditor.ignoreTrimWhitespace": false,
 
-  "window.commandCenter": true, // [커맨드 센터 중앙으로 배치](https://code.visualstudio.com/updates/v1_69#_command-center)
   "window.confirmBeforeClose": "keyboardOnly", // vim 사용하면서 대부분 액션을 키보드로 조작하게 되었는데 그러면서 실수로 `ctrl` + `shift` + `w` 를 누르며 VSCode가 종료되는 경험이 반복되어 컨펌 창 추가
 
   "git.autofetch": true, // vscode에서 주기적으로 git fetch하는 기능 활성화: 오른쪽 하단에 자동 알림화면에 뜨길래 설정함
@@ -58,6 +59,14 @@
      * [찾아보니까 성능 문제 때문에 활성화 하는 것이네요](https://github.com/vscode-neovim/vscode-neovim#performance-problems)
      */
     "asvetliakov.vscode-neovim": 1
+  },
+
+  // markdown에서 비활성화 되어있길래 활성화 버튼 누르면 자동으로 아래의 옵션이 설정되었으며 해당 기본 값을 그대로 사용
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
   },
 
   "prettier.singleQuote": false,
@@ -104,14 +113,6 @@
   "powermode.shake.enabled": false, // power mode 화면이 흔들림 활성화 여부
   "powermode.presets": "fireworks", // power mode 효과
 
-  // k8s 확장 관련해서 에러가 나와서 install 눌었더니 생김 딱히 중요한 설정은 아닌거 같으며 그냥 파일 경로인 거 같습니다.
-  // 계속 에러 경고를 보고 싶지 않음으로 필요에 따라 삭제하도록 합니다.
-  "vs-kubernetes": {
-    "vscode-kubernetes.kubectl-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\kubectl\\kubectl.exe",
-    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
-    "vscode-kubernetes.helm-path.windows": "C:\\Users\\kyungeun\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
-  },
-
   // 2022-10-23자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다
   // Vim 설정: 해당 설정에서 조정이 안되는 것은 keybindings.json 에도 있습니다
   // "vim.handleKeys": {
@@ -138,6 +139,8 @@
 
   "playwright.reuseBrowser": true,
   "playwright.showTrace": false,
+
+  "svn.ignoreMissingSvnWarning": true, // 개발 2팀 개발 환경 때문에 SVN 확장 설치한 것인데 SVN 필요 없는 상황에서도 나오는 경고 메시지 보기 싫어서 비활성화
 
   /* language */
 
@@ -230,20 +233,11 @@
     "editor.defaultFormatter": "Prisma.prisma"
   },
 
-  /* SQL Server */
+  /* config */
 
-  "mssql.connections": [
-    {
-      "server": "172.21.0.1",
-      "database": "",
-      "authenticationType": "SqlLogin",
-      "user": "prisma_migrate",
-      "password": "",
-      "emptyPasswordInput": false,
-      "savePassword": true,
-      "profileName": "nanumsem localhost for WSL"
-    }
-  ],
+  "remote.SSH.remotePlatform": {
+    "sds-dev-server": "linux"
+  },
 
   /* 실험 */
 
@@ -251,7 +245,9 @@
   "diffEditor.experimental.useVersion2": true,
   "diffEditor.experimental.showEmptyDecorations": true,
   "diffEditor.experimental.showMoves": true,
-  "diffEditor.experimental.collapseUnchangedRegions": true
+  "diffEditor.hideUnchangedRegions.enabled": true, // [숨겨진 것에 대한 정보를 나타내주는 듯?](https://code.visualstudio.com/updates/v1_82#_collapsed-unchanged-code-headers)
+
+  "accessibility.dimUnfocused.enabled": true // [포커스가 없는 편집기를 어둡게 표시](https://code.visualstudio.com/updates/v1_82#_dim-unfocused-editors-and-terminals)
 
   /* EOF */
 }
