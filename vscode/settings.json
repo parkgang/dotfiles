@@ -190,7 +190,6 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "go.gopath": "",
   "go.toolsManagement.autoUpdate": true,
   "go.delveConfig": {
     "debugAdapter": "legacy" // [handler에 중단점을 찍을 때마다 디버깅이 중지되어서 일단은 레거시 디버깅 사용](https://stackoverflow.com/questions/69156581/does-the-execution-have-to-keep-stopping-to-set-a-breakpoint)
@@ -247,7 +246,7 @@
   "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true, // [숨겨진 것에 대한 정보를 나타내주는 듯?](https://code.visualstudio.com/updates/v1_82#_collapsed-unchanged-code-headers)
 
-  "accessibility.dimUnfocused.enabled": true // [포커스가 없는 편집기를 어둡게 표시](https://code.visualstudio.com/updates/v1_82#_dim-unfocused-editors-and-terminals)
+  "debug.toolBarLocation": "commandCenter" // [명령 센터에 디버깅 도구 표시되도록](https://code.visualstudio.com/updates/v1_83#_command-center-and-debug-toolbar)
 
   /* EOF */
 }
