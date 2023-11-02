@@ -244,9 +244,14 @@
   "diffEditor.experimental.useVersion2": true,
   "diffEditor.experimental.showEmptyDecorations": true,
   "diffEditor.experimental.showMoves": true,
-  "diffEditor.hideUnchangedRegions.enabled": true, // [숨겨진 것에 대한 정보를 나타내주는 듯?](https://code.visualstudio.com/updates/v1_82#_collapsed-unchanged-code-headers)
+  // [숨겨진 것에 대한 정보를 나타내주는 듯?](https://code.visualstudio.com/updates/v1_82#_collapsed-unchanged-code-headers)
+  "diffEditor.hideUnchangedRegions.enabled": true,
 
-  "debug.toolBarLocation": "commandCenter" // [명령 센터에 디버깅 도구 표시되도록](https://code.visualstudio.com/updates/v1_83#_command-center-and-debug-toolbar)
+  // [명령 센터에 디버깅 도구 표시되도록](https://code.visualstudio.com/updates/v1_83#_command-center-and-debug-toolbar)
+  "debug.toolBarLocation": "commandCenter",
+
+  // [여러 편집기 탭에서도 하이라이팅 되도록](https://code.visualstudio.com/updates/v1_84#_multidocument-highlighting)
+  "editor.multiDocumentOccurrencesHighlight": true
 
   /* EOF */
 }
