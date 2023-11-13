@@ -235,7 +235,8 @@
   /* config */
 
   "remote.SSH.remotePlatform": {
-    "sds-dev-server": "linux"
+    "sds-40-server": "linux",
+    "sds-123-server": "linux"
   },
 
   /* 실험 */
@@ -251,7 +252,8 @@
   "debug.toolBarLocation": "commandCenter",
 
   // [여러 편집기 탭에서도 하이라이팅 되도록](https://code.visualstudio.com/updates/v1_84#_multidocument-highlighting)
-  "editor.multiDocumentOccurrencesHighlight": true
+  "editor.multiDocumentOccurrencesHighlight": true,
+  "window.zoomLevel": 1
 
   /* EOF */
 }
