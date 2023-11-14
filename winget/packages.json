@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2023-08-18T20:26:34.732-00:00",
+  "CreationDate": "2023-11-14T14:50:42.523-00:00",
   "Sources": [
     {
       "Packages": [
@@ -26,6 +26,9 @@
           "PackageIdentifier": "Google.Chrome"
         },
         {
+          "PackageIdentifier": "Microsoft.Teams"
+        },
+        {
           "PackageIdentifier": "Microsoft.Edge"
         },
         {
@@ -38,16 +41,31 @@
           "PackageIdentifier": "Microsoft.OneDrive"
         },
         {
-          "PackageIdentifier": "Microsoft.Teams"
+          "PackageIdentifier": "JetBrains.PHPStorm"
+        },
+        {
+          "PackageIdentifier": "Webyog.SQLyogCommunity"
+        },
+        {
+          "PackageIdentifier": "Microsoft.Teams.Classic"
         },
         {
           "PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
+        },
+        {
+          "PackageIdentifier": "PuTTY.PuTTY"
+        },
+        {
+          "PackageIdentifier": "JohnMacFarlane.Pandoc"
         },
         {
           "PackageIdentifier": "Microsoft.VisualStudioCode"
         },
         {
           "PackageIdentifier": "Logitech.OptionsPlus"
+        },
+        {
+          "PackageIdentifier": "TortoiseSVN.TortoiseSVN"
         }
       ],
       "SourceDetails": {
@@ -58,5 +76,5 @@
       }
     }
   ],
-  "WinGetVersion": "1.5.2201"
+  "WinGetVersion": "1.6.2771"
 }
