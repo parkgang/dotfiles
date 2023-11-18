@@ -50,6 +50,7 @@
   "window.confirmBeforeClose": "keyboardOnly", // vim 사용하면서 대부분 액션을 키보드로 조작하게 되었는데 그러면서 실수로 `ctrl` + `shift` + `w` 를 누르며 VSCode가 종료되는 경험이 반복되어 컨펌 창 추가
 
   "git.autofetch": true, // vscode에서 주기적으로 git fetch하는 기능 활성화: 오른쪽 하단에 자동 알림화면에 뜨길래 설정함
+  "git.openRepositoryInParentFolders": "always", // 항상 작업 영역의 부모 폴더의 git repo 열기
 
   /* Extensions 옵션 */
 
@@ -190,6 +191,7 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
+  "go.gopath": "",
   "go.toolsManagement.autoUpdate": true,
   "go.delveConfig": {
     "debugAdapter": "legacy" // [handler에 중단점을 찍을 때마다 디버깅이 중지되어서 일단은 레거시 디버깅 사용](https://stackoverflow.com/questions/69156581/does-the-execution-have-to-keep-stopping-to-set-a-breakpoint)
