@@ -1,0 +1,18 @@
+{
+  "quick main 🔥": {
+    "prefix": "main",
+    "body": [
+      "#include <iostream>",
+      "",
+      "using namespace std;",
+      "",
+      "int main(int argc, char const *argv[])",
+      "{",
+      "    $0",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "빠르게 기본 main 코드 생성"
+  }
+}
