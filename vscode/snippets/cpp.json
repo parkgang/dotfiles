@@ -1,6 +1,6 @@
 {
   "quick main 🔥": {
-    "prefix": "main",
+    "prefix": "qm",
     "body": [
       "#include <iostream>",
       "",
