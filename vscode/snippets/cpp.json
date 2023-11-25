@@ -1,8 +1,28 @@
 {
-  "quick main 🔥": {
-    "prefix": "qm",
+  "quick-iostream 🔥": {
+    "prefix": "ctio",
     "body": [
       "#include <iostream>",
+      "",
+      "using namespace std;",
+      "",
+      "int main()",
+      "{",
+      "    ios_base::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "",
+      "    $0",
+      "",
+      "    return 0;",
+      "}",
+      ""
+    ],
+    "description": "iostream를 사용하면서 빠른 입출력"
+  },
+  "use-cstdio 🔥": {
+    "prefix": "ctcstd",
+    "body": [
+      "#include <cstdio>",
       "",
       "using namespace std;",
       "",
@@ -11,8 +31,9 @@
       "    $0",
       "",
       "    return 0;",
-      "}"
+      "}",
+      ""
     ],
-    "description": "빠르게 기본 main 코드 생성"
+    "description": "cstdio를 I/O로 사용"
   }
 }
