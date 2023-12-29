@@ -26,10 +26,10 @@
   "editor.formatOnPaste": true,
   "editor.suggest.preview": true, // [제안 미리보기가 활성화](https://code.visualstudio.com/updates/v1_60#_inline-suggestions-in-autocomplete)
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true, // For ESLint
-    "source.organizeImports": true // [사용하지 않는 import 제거 및 정렬](https://webruden.tistory.com/1069)
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always" // [사용하지 않는 import 제거 및 정렬](https://webruden.tistory.com/1069)
     // [사용하지 않는 import를 자동으로 정리](https://devblogs.microsoft.com/typescript/announcing-typescript-4-9-rc/#sort-remove-import-commands): `source.organizeImports` 는 사용하지 않는 import 제거 및 정렬 기능도 있어서 `eslint` 의 `simple-import-sort` 와 충돌할 수 있습니다.
-    // "source.removeUnusedImports": true
+    // "source.removeUnusedImports": "always"
   },
   "editor.bracketPairColorization.enabled": true, // [native bracket 사용](https://github.com/CoenraadS/Bracket-Pair-Colorizer-2#how-to-enable-native-bracket-matching)
   // [수평 브래킷 가이드 사용](https://code.visualstudio.com/updates/v1_67#_bracket-guide-improvements)
@@ -244,17 +244,27 @@
   /* 실험 */
 
   // [diff 편집기 보강되었다고 하길래 써봄](https://code.visualstudio.com/updates/v1_80#_new-diff-editor)
-  "diffEditor.experimental.useVersion2": true,
   "diffEditor.experimental.showEmptyDecorations": true,
   "diffEditor.experimental.showMoves": true,
   // [숨겨진 것에 대한 정보를 나타내주는 듯?](https://code.visualstudio.com/updates/v1_82#_collapsed-unchanged-code-headers)
   "diffEditor.hideUnchangedRegions.enabled": true,
+  // [변경 사항 스크롤로 한번에 볼 수 있도록](https://code.visualstudio.com/updates/v1_85#_multifile-diff-editor)
+  "multiDiffEditor.experimental.enabled": true,
 
   // [명령 센터에 디버깅 도구 표시되도록](https://code.visualstudio.com/updates/v1_83#_command-center-and-debug-toolbar)
   "debug.toolBarLocation": "commandCenter",
 
-  // [여러 편집기 탭에서도 하이라이팅 되도록](https://code.visualstudio.com/updates/v1_84#_multidocument-highlighting)
-  "editor.multiDocumentOccurrencesHighlight": true,
+  // [여러 편집기 탭에서도 하이라이팅 되도록](https://code.visualstudio.com/updates/v1_85#_multi-document-highlighting)
+  "editor.occurrencesHighlight": "multiFile",
+
+  // [탐색기에서 sticky scroll 사용](https://code.visualstudio.com/updates/v1_85#_sticky-scroll-in-trees)
+  "workbench.tree.enableStickyScroll": true,
+  // [터미널에도 sticky scroll 적용되도록](https://code.visualstudio.com/updates/v1_85#_sticky-scroll)
+  "terminal.integrated.stickyScroll.enabled": true,
+
+  // [TS에서 import시 자동으로 type만 가져오는 설정 같음](https://code.visualstudio.com/updates/v1_85#_prefer-using-type-for-auto-imports)
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+
   "window.zoomLevel": 1
 
   /* EOF */
