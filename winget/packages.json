@@ -1,9 +1,12 @@
 {
   "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-  "CreationDate": "2023-11-14T14:50:42.523-00:00",
+  "CreationDate": "2024-01-08T17:40:18.331-00:00",
   "Sources": [
     {
       "Packages": [
+        {
+          "PackageIdentifier": "CoreyButler.NVMforWindows"
+        },
         {
           "PackageIdentifier": "Notion.Notion"
         },
@@ -76,5 +79,5 @@
       }
     }
   ],
-  "WinGetVersion": "1.6.2771"
+  "WinGetVersion": "1.6.3482"
 }
