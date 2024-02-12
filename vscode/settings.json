@@ -145,7 +145,7 @@
 
   /* language */
 
-  /* markdown */
+  /* Markdown */
 
   // [파일 이동 및 이름 변경 시 마크다운 링크 업데이트](https://code.visualstudio.com/updates/v1_71#_markdown-link-update-on-file-move-and-rename)
   // [정식 기능으로 출시](https://code.visualstudio.com/updates/v1_73#_markdown-automatic-link-updates-on-file-rename-move)
@@ -228,7 +228,7 @@
   "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
   "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
 
-  /* prisma */
+  /* Prisma */
 
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
