@@ -88,11 +88,13 @@
   ],
   // .cs, .go 등 기본 값 파일 이외 추가 등록
   "todohighlight.include": [
+    "**/*.txt",
     "**/*.json",
     "**/*.yml",
     "**/*.yaml",
     "**/*.http",
     "**/*.md",
+    "**/*.mdx",
 
     "**/*.html",
     "**/*.css",
@@ -103,16 +105,14 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.cs",
-    "**/*.go"
+    "**/*.go",
+    "**/*.cpp",
+    "**/*.php"
   ],
 
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   "rest-client.previewOption": "exchange", // 요청 내용도 볼 수 있도록 활성화, 원래는 응답만 볼 수 있도록 설정되어 있습니다.
-
-  "powermode.enabled": true, // power mode 활성화
-  "powermode.shake.enabled": false, // power mode 화면이 흔들림 활성화 여부
-  "powermode.presets": "fireworks", // power mode 효과
 
   // 2022-10-23자로 NeoVim으로 전환하여 해당 설정은 모두 주석처리 하였습니다
   // Vim 설정: 해당 설정에서 조정이 안되는 것은 keybindings.json 에도 있습니다
@@ -186,7 +186,7 @@
   "typescript.tsserver.maxTsServerMemory": 10240, // ts 설정 살펴보다가 발견함 속도가 느려서 메모리 10GB 주고 성능 향상이 있는지 보려고 함
   "typescript.preferences.includePackageJsonAutoImports": "on", // MUI가 들어간 프로젝트의 경우 도중에 import가 안되는 경우가 있는데 [해당 옵션을 활성화 해서 항상 잘 표시되는지 확인하려고 함](https://velog.io/@hustle-dev/TypeScript-4.0-%EB%B2%88%EC%97%AD#%EB%8D%94-%EB%98%91%EB%98%91%ED%95%9C-%EC%9E%90%EB%8F%99-import)
 
-  /* go */
+  /* Go */
 
   "[go]": {
     "editor.defaultFormatter": "golang.go"
@@ -206,7 +206,7 @@
   "go.inlayHints.rangeVariableTypes": true,
   "go.inlayHints.parameterNames": true,
 
-  /* dotnet and c# */
+  /* dotnet and C# */
 
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp" // [C#의 경우 prettier를 지원하지 않아 아래의 포멧터를 사용합니다.](https://stackoverflow.com/questions/47352611/visual-studio-code-doesnt-format-c-sharp-code)
@@ -234,6 +234,18 @@
     "editor.defaultFormatter": "Prisma.prisma"
   },
 
+  /* C++ */
+
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.clang_format_fallbackStyle": "Google", // [코드 포매팅 스타일을 정의합니다](https://80000coding.oopy.io/bd5c80d7-92ce-4387-ae74-b6d35ad77635)
+  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+  "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+
   /* config */
 
   "remote.SSH.remotePlatform": {
@@ -257,8 +269,6 @@
   // [여러 편집기 탭에서도 하이라이팅 되도록](https://code.visualstudio.com/updates/v1_85#_multi-document-highlighting)
   "editor.occurrencesHighlight": "multiFile",
 
-  // [탐색기에서 sticky scroll 사용](https://code.visualstudio.com/updates/v1_85#_sticky-scroll-in-trees)
-  "workbench.tree.enableStickyScroll": true,
   // [터미널에도 sticky scroll 적용되도록](https://code.visualstudio.com/updates/v1_85#_sticky-scroll)
   "terminal.integrated.stickyScroll.enabled": true,
 
