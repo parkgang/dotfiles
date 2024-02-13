@@ -1,6 +1,7 @@
 {
   "workbench.colorTheme": "GitHub Dark Default",
   // [밝은 테마와 어두운 테마 간 전환](https://code.visualstudio.com/updates/v1_69#_toggle-between-light-and-dark-themes)
+  "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "GitHub Light Default",
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
