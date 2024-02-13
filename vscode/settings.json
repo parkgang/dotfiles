@@ -144,6 +144,10 @@
 
   "svn.ignoreMissingSvnWarning": true, // 개발 2팀 개발 환경 때문에 SVN 확장 설치한 것인데 SVN 필요 없는 상황에서도 나오는 경고 메시지 보기 싫어서 비활성화
 
+  "cmake.configureOnOpen": true, // 프로젝트 열 때 자동으로 CMake를 실행
+  "cmake.showOptionsMovedNotification": false, // 상태 표시줄이 아닌 확장 도구 매뉴에서 표시된다는 정보 알림 비활성화
+  "cmake.options.statusBarVisibility": "icon", // 상태 표지줄에 CMake 작업 아이콘 표시
+
   /* language */
 
   /* Markdown */
