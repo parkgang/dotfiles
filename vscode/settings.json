@@ -45,8 +45,9 @@
   "editor.stickyScroll.enabled": true, // [Sticky Scroll](https://code.visualstudio.com/updates/v1_71#_sticky-scroll)
   "editor.linkedEditing": true, // [Tag를 쌍으로 수정해 줌, 덕분에 Auto Rename Tag 확장을 사용하지 않아도 됨](https://code.visualstudio.com/updates/v1_79#_linked-editing-for-jsx-tags)
 
-  // Diff 편집기가 선행 또는 후행 공백의 변경 내용을 무시하지 않도록
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": false, // Diff 편집기가 선행 또는 후행 공백의 변경 내용을 무시하지 않도록
+
+  "debug.inlineValues": "on", // 디버깅 중에 인라인 값 표시
 
   "window.confirmBeforeClose": "keyboardOnly", // vim 사용하면서 대부분 액션을 키보드로 조작하게 되었는데 그러면서 실수로 `ctrl` + `shift` + `w` 를 누르며 VSCode가 종료되는 경험이 반복되어 컨펌 창 추가
 
