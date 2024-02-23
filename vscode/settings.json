@@ -44,6 +44,7 @@
   },
   "editor.stickyScroll.enabled": true, // [Sticky Scroll](https://code.visualstudio.com/updates/v1_71#_sticky-scroll)
   "editor.linkedEditing": true, // [Tag를 쌍으로 수정해 줌, 덕분에 Auto Rename Tag 확장을 사용하지 않아도 됨](https://code.visualstudio.com/updates/v1_79#_linked-editing-for-jsx-tags)
+  "editor.inlayHints.padding": true,
 
   "diffEditor.ignoreTrimWhitespace": false, // Diff 편집기가 선행 또는 후행 공백의 변경 내용을 무시하지 않도록
 
@@ -71,9 +72,6 @@
     "markdown": true,
     "scminput": false
   },
-
-  "prettier.singleQuote": false,
-  "prettier.printWidth": 80, // [기본 값 사용](https://prettier.io/docs/en/options.html#print-width)
 
   "liveServer.settings.donotShowInfoMsg": true,
 
@@ -108,8 +106,9 @@
     "**/*.tsx",
     "**/*.cs",
     "**/*.go",
+    "**/*.php",
     "**/*.cpp",
-    "**/*.php"
+    "**/*.py"
   ],
 
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -162,6 +161,12 @@
   // [이미 링크가 있는 상태에서 붙어넣기를 하면 무조건 링크를 만들려고 해서 불편했는데 해당 부분 업데이트 된 내용](https://code.visualstudio.com/updates/v1_81#_markdown-paste-urls-as-formatted-links)
   "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
 
+  /* Prisma */
+
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+
   /* JS/TS */
 
   // [Inlay hints 활성화](https://code.visualstudio.com/updates/v1_60#_inlay-hints-for-javascript-and-typescript)
@@ -192,26 +197,6 @@
   "typescript.tsserver.maxTsServerMemory": 10240, // ts 설정 살펴보다가 발견함 속도가 느려서 메모리 10GB 주고 성능 향상이 있는지 보려고 함
   "typescript.preferences.includePackageJsonAutoImports": "on", // MUI가 들어간 프로젝트의 경우 도중에 import가 안되는 경우가 있는데 [해당 옵션을 활성화 해서 항상 잘 표시되는지 확인하려고 함](https://velog.io/@hustle-dev/TypeScript-4.0-%EB%B2%88%EC%97%AD#%EB%8D%94-%EB%98%91%EB%98%91%ED%95%9C-%EC%9E%90%EB%8F%99-import)
 
-  /* Go */
-
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
-  "go.gopath": "",
-  "go.toolsManagement.autoUpdate": true,
-  "go.delveConfig": {
-    "debugAdapter": "legacy" // [handler에 중단점을 찍을 때마다 디버깅이 중지되어서 일단은 레거시 디버깅 사용](https://stackoverflow.com/questions/69156581/does-the-execution-have-to-keep-stopping-to-set-a-breakpoint)
-  },
-  // [Golang 확장 인레이 힌트 활성화](https://twitter.com/golang/status/1549106172870987776?s=21&t=5wEfMWJLporZ3Erph2QTwA)
-  // [Release Note](https://github.com/golang/vscode-go/releases/tag/v0.35.0)
-  "go.inlayHints.assignVariableTypes": true,
-  "go.inlayHints.compositeLiteralFields": true,
-  "go.inlayHints.compositeLiteralTypes": true,
-  "go.inlayHints.constantValues": true,
-  "go.inlayHints.functionTypeParameters": true,
-  "go.inlayHints.rangeVariableTypes": true,
-  "go.inlayHints.parameterNames": true,
-
   /* dotnet and C# */
 
   "[csharp]": {
@@ -234,23 +219,45 @@
   "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
   "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
 
-  /* Prisma */
+  /* Go */
 
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
   },
+  "go.toolsManagement.autoUpdate": true, // Go에서 사용되는 도구들 자동 업데이트
+  // [Golang 확장 인레이 힌트 활성화](https://twitter.com/golang/status/1549106172870987776?s=21&t=5wEfMWJLporZ3Erph2QTwA)
+  // [Release Note](https://github.com/golang/vscode-go/releases/tag/v0.35.0)
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "go.inlayHints.parameterNames": true,
 
   /* C++ */
 
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.clang_format_fallbackStyle": "Google", // [코드 포매팅 스타일을 정의합니다](https://80000coding.oopy.io/bd5c80d7-92ce-4387-ae74-b6d35ad77635)
+  "C_Cpp.clang_format_fallbackStyle": "Google", // [코드 포맷팅 스타일을 정의합니다](https://80000coding.oopy.io/bd5c80d7-92ce-4387-ae74-b6d35ad77635)
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
   "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
   "C_Cpp.inlayHints.parameterNames.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+
+  /* Python */
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "black-formatter.args": ["--line-length", "80"], // Black 기본은 88이라고 한다. Prettier 및 보통 포멧과 동일하게 맞춤
+  "isort.args": ["--profile", "black"],
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
 
   /* config */
 
