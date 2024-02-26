@@ -46,8 +46,6 @@
   "editor.linkedEditing": true, // [Tag를 쌍으로 수정해 줌, 덕분에 Auto Rename Tag 확장을 사용하지 않아도 됨](https://code.visualstudio.com/updates/v1_79#_linked-editing-for-jsx-tags)
   "editor.inlayHints.padding": true,
 
-  "diffEditor.ignoreTrimWhitespace": false, // Diff 편집기가 선행 또는 후행 공백의 변경 내용을 무시하지 않도록
-
   "debug.inlineValues": "on", // 디버깅 중에 인라인 값 표시
 
   "window.confirmBeforeClose": "keyboardOnly", // vim 사용하면서 대부분 액션을 키보드로 조작하게 되었는데 그러면서 실수로 `ctrl` + `shift` + `w` 를 누르며 VSCode가 종료되는 경험이 반복되어 컨펌 창 추가
@@ -271,8 +269,6 @@
   // [diff 편집기 보강되었다고 하길래 써봄](https://code.visualstudio.com/updates/v1_80#_new-diff-editor)
   "diffEditor.experimental.showEmptyDecorations": true,
   "diffEditor.experimental.showMoves": true,
-  // [숨겨진 것에 대한 정보를 나타내주는 듯?](https://code.visualstudio.com/updates/v1_82#_collapsed-unchanged-code-headers)
-  "diffEditor.hideUnchangedRegions.enabled": true,
   // [변경 사항 스크롤로 한번에 볼 수 있도록](https://code.visualstudio.com/updates/v1_85#_multifile-diff-editor)
   "multiDiffEditor.experimental.enabled": true,
 
@@ -288,7 +284,11 @@
   // [TS에서 import시 자동으로 type만 가져오는 설정 같음](https://code.visualstudio.com/updates/v1_85#_prefer-using-type-for-auto-imports)
   "typescript.preferences.preferTypeOnlyAutoImports": true,
 
-  "window.zoomLevel": 1
+  /* 지속적으로 변할 수 있는 설정들 */
+
+  "window.zoomLevel": 1,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.hideUnchangedRegions.enabled": true
 
   /* EOF */
 }
