@@ -42,7 +42,6 @@
     "strings": "on",
     "other": "on"
   },
-  "editor.stickyScroll.enabled": true, // [Sticky Scroll](https://code.visualstudio.com/updates/v1_71#_sticky-scroll)
   "editor.linkedEditing": true, // [Tag를 쌍으로 수정해 줌, 덕분에 Auto Rename Tag 확장을 사용하지 않아도 됨](https://code.visualstudio.com/updates/v1_79#_linked-editing-for-jsx-tags)
   "editor.inlayHints.padding": true,
 
@@ -70,6 +69,7 @@
     "markdown": true,
     "scminput": false
   },
+  "inlineChat.accessibleDiffView": "on", // GitHub Copilot Chat이 제안한 수정 사항을 항상 diff으로 볼 수 있도록
 
   "liveServer.settings.donotShowInfoMsg": true,
 
@@ -288,7 +288,8 @@
 
   "window.zoomLevel": 1,
   "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.hideUnchangedRegions.enabled": true
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.largeFileOptimizations": false
 
   /* EOF */
 }
