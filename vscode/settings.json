@@ -75,39 +75,50 @@
 
   "redhat.telemetry.enabled": false, // redhat yaml 관련 팝업 계속 떠서 비활성화
 
-  // NOTE: 도 어노테이션에 추가하려고: 보편적으로 많이 사용하니까
-  "todohighlight.keywords": [
-    {
-      "text": "NOTE:",
-      "color": "#ff0000",
-      "backgroundColor": "yellow",
-      "overviewRulerColor": "grey"
+  "todo-tree.general.showActivityBarBadge": true, // 액티비티 바에 뱃지로 개수 표시
+  "todo-tree.regex.regex": "((\\*|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])", // [여러줄 주석에서도 표시되도록 블로그 글 참고](https://velog.io/@young_pallete/%EC%9D%B5%EC%8A%A4%ED%85%90%EC%85%98-Todo-Tree-Extension%EC%9C%BC%EB%A1%9C-%EA%B9%94%EB%81%94%ED%95%98%EA%B2%8C-todo-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0#%EC%A0%9C%EA%B0%80-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%84%A4%EC%A0%95)
+  "todo-tree.general.tags": ["TODO", "FIXME", "NOTE", "[ ]", "[x]"],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "background": "#b782f9",
+      "foreground": "#ffffff",
+      "gutterIcon": true,
+      "icon": "pin",
+      "iconColour": "#b782f9"
+    },
+    "FIXME": {
+      "background": "#ff0404",
+      "foreground": "#ffffff",
+      "gutterIcon": true,
+      "icon": "alert",
+      "iconColour": "#ff0404",
+      "type": "text"
+    },
+    "NOTE": {
+      "background": "#ffc404",
+      "foreground": "#ffffff",
+      "gutterIcon": true,
+      "icon": "star-fill",
+      "iconColour": "#ffc404",
+      "type": "text"
+    },
+    "[ ]": {
+      "background": "#f87364",
+      "foreground": "#ffffff",
+      "gutterIcon": true,
+      "icon": "x",
+      "iconColour": "#f87364",
+      "type": "text"
+    },
+    "[x]": {
+      "background": "#20a904",
+      "foreground": "#ffffff",
+      "gutterIcon": true,
+      "icon": "check",
+      "iconColour": "#20a904",
+      "type": "text"
     }
-  ],
-  // .cs, .go 등 기본 값 파일 이외 추가 등록
-  "todohighlight.include": [
-    "**/*.txt",
-    "**/*.json",
-    "**/*.yml",
-    "**/*.yaml",
-    "**/*.http",
-    "**/*.md",
-    "**/*.mdx",
-
-    "**/*.html",
-    "**/*.css",
-    "**/*.scss",
-
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.cs",
-    "**/*.go",
-    "**/*.php",
-    "**/*.cpp",
-    "**/*.py"
-  ],
+  },
 
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
